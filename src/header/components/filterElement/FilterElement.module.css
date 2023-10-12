@@ -1,0 +1,22 @@
+.wrapper{
+  width: 9rem;
+  height: 2rem;
+  background: white;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding-right: 2.5rem;
+  padding-left: .5rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.imgSvg{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2rem;
+  width: 2rem;
+  fill: var(--buttonsCollor);
+}

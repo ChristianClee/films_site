@@ -1,0 +1,12 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.032 512.032" xml:space="preserve" width="101px" height="101px" fill="white">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier"> <rect x="83.368" y="24.32" style="fill:var(--headerColor);" width="324.672" height="86"/> <path d="M432.712,102.624c-5.728-7.36-19.232-30.96,0.816-70.624h12.528V0H124.712c-37.04,0-67.184,30.208-67.184,67.312v358.24 c0,30.288,8.352,53.376,24.832,68.608c17.584,16.272,38.32,17.872,45.408,17.872c1.328,0,2.192-0.048,2.448-0.08h324.288V102.624 H432.712z M124.712,102.624c-19.392,0-35.184-15.84-35.184-35.312S105.304,32,124.712,32h273.872 c-11.6,30.4-8.432,54.24-2.016,70.624H124.712z"/> <polyline style="fill:var(--headerColor);" points="143.208,102.624 143.208,357.664 226.536,284.064 304.312,356.32 304.312,102.624 "/> </g>
+
+</svg>

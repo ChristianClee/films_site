@@ -1,0 +1,68 @@
+.header{
+  width: 100%;  
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.containerGreed{
+  position: relative;
+  background-color: var( --headerColor);
+  padding: .5rem;
+  max-width: 1500px;
+  height: var(--heightHeader);
+  margin: 0 auto;
+}
+.containerGreed::before{
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var( --headerColor);
+  z-index: -1;
+}
+.containerGreed::after{
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: var( --headerColor);
+  z-index: -1;
+}
+.containerFlex{
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.burgerConteiterSvg{
+  width: 2rem;
+  height: 2rem;
+}
+.svgImgMedium{
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+.svgImgLittle{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.flexAlighnContainer{
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width: 650px){
+  .containerGreed{
+    padding: 0.7rem .5rem .2rem .5rem;
+  }
+}
+@media(max-width: 500px){
+  .containerGreed{
+    padding: 0.5rem .5rem .2rem .5rem;
+  }
+}

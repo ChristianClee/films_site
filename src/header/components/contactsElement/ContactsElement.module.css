@@ -1,0 +1,35 @@
+.contacts{
+  display: flex;
+  font-size: 1.4rem;
+  color: white;
+  flex-direction: column;
+  gap: .5rem;
+}
+.contactsItem{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.svgImgLittle{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media(max-width:1200px){
+  .contacts{
+  flex-direction: row;
+  gap: .5rem;
+  font-size: 1.2rem;
+}
+}
+@media(max-width:650px){
+  .contacts{
+    flex-direction: row;
+    gap: .5rem;
+    font-size: .9rem;
+  }
+  .svgImgLittle{
+      width: 1rem;
+      height: 1rem;
+  }
+}

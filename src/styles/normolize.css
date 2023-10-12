@@ -1,0 +1,105 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    /* it changes the counting method of blocks in such
+    a way it is more convenient for us to make up  */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* removes border lines in some browsers  */
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    /* mekes tags value to block */
+    display: block;
+}
+
+html,
+body {
+    /* it equalizes font's property to all browsers */
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: 0.2px;
+}
+input,
+button,
+textarea {
+    /* it requares to inherit font from parants */
+    font-family: inherit;
+}
+
+/* removes crest in IE,
+removes excess space in fireFox,
+cleaning mark style lists
+ */
+input::-ms-clear {
+    display: none;
+}
+
+/* removes crest in IE */
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* removes excess space in fireFox*/
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a{
+    color: inherit
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* makes same font to All specified tags  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}

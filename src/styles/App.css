@@ -1,0 +1,19 @@
+html{
+  font-size: 100%;
+}
+#root{
+  min-height: 100%;
+}
+
+.App{
+  padding: 0 .5rem;
+  /* background: green; */
+  min-height:  100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+main{
+  padding-top: var(--heightHeader);
+  flex-grow: 1;
+}
