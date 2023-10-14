@@ -15,6 +15,10 @@ const ContactsElement:React.FC = () => {
         <PhoneSvg className={style.svgImgLittle} />
         <span>8-977-439-34-18</span>
       </div>
+
+      <button className={style.contactsButton}>
+        contacts
+      </button>
     </div>
   );
 }

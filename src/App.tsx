@@ -1,18 +1,22 @@
 import React from 'react';
-import Header from './header/Header';
-import Footer from './footer/Footer';
-import './styles/all.css'
+
+import './styles/all.css';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './pages/mainPage/MainPage';
+import Layout from './Layout';
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        main
-      </main>
-      <Footer/>
-    </div>
+    
+    <>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<MainPage />} />
+        </Route>
+      </Routes>
+      
+    </>
   );
 }
 

@@ -58,11 +58,6 @@
 
 @media(max-width: 650px){
   .containerGreed{
-    padding: 0.7rem .5rem .2rem .5rem;
-  }
-}
-@media(max-width: 500px){
-  .containerGreed{
-    padding: 0.5rem .5rem .2rem .5rem;
+
   }
 }

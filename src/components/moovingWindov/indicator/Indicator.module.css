@@ -1,0 +1,19 @@
+.indicator{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 50%;
+  height: 1rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  /* border: 1px solid black */
+}
+.ball{
+  position: absolute;
+  width: .4rem;
+  height: .4rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+}

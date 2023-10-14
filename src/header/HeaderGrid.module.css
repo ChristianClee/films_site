@@ -43,21 +43,7 @@
       "contacts  contacts contacts contacts  items items items items "
       "search  search search search search search search  burger";
     grid-template-columns: 7fr 1fr ;
-    grid-template-rows: 1rem 4rem;
+    grid-template-rows: 1.7rem 3.9rem;
     grid-column-gap: 0.5rem;
-    /* grid-row-gap: .3rem */
-
-  }
-}
-@media(max-width: 500px){
-  .container{
-    grid-template-areas:
-      "contacts contacts contacts"
-      "items items items"
-      "logo search  burger";
-    grid-template-columns: auto  1fr auto ;
-    grid-template-rows: 1rem 1rem 2.7rem;
-    grid-row-gap: .3rem
-
   }
 }
