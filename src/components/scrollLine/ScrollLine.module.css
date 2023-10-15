@@ -1,0 +1,33 @@
+.wrapper{
+  position: relative;
+  width: 100%;
+  border: 10px solid black;
+  overflow: hidden;
+  /* width: 30rem; */
+  
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+
+}
+.line{
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none; 
+  cursor: grab;
+}
+/* 
+.line::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+} */
+
+.element{
+  display: inline-block;
+  /* width: 10rem; */
+  /* height: 20rem; */
+
+}

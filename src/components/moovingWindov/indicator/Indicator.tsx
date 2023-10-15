@@ -5,7 +5,7 @@ import style from './Indicator.module.css'
 const Indicator: React.FC<{ length: number, count: number }> = ({length, count}) => {
   return (
     <div className={style.indicator}>
-      {Array(5).fill("").map((item, index) => {
+      {Array(length).fill("").map((item, index) => {
 
         const part = 100 / length
         const left = part * index + part / length

@@ -2,3 +2,13 @@
   margin-top: 1rem;
   
 }
+.flexContainer{
+  display: flex;
+  gap: 1rem;
+}
+.flexContainer>:first-child{
+  flex-shrink: 0;
+}
+.flexContainer>:nth-child(2){
+  flex-grow: 0;
+}

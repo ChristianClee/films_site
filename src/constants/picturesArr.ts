@@ -7,6 +7,8 @@ import five from '../assets/img/jpg/supergeroj-betmen.jpg'
 export type ArrPictureT = string[]
 
 export const arrPicture:ArrPictureT = [one, two, tree, four, five]
+export const arrPicture1:ArrPictureT = [one, two, tree, four, five]
+export const arrPicture2:ArrPictureT = [one, two, tree, four, five]
 
 
 

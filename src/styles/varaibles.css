@@ -1,12 +1,13 @@
 :root{
   --heightHeader: 6rem;
+  --maxWidth: 1500px;
 }
 :root{
   --buttonsCollor:rgb(77, 155, 4);
   --headerColor: rgb(66, 66, 66);
 }
 :root{
-  --movingElemSizeWidth: 25rem;
-  --movingElemSizeHeight: 14rem;
+  --movingElemSizeWidth: 35rem;
+  --movingElemSizeHeight: 25rem;
  
 }

@@ -12,10 +12,10 @@ export function useFirstMove(lineRef: RefDivT) {
   },[])
 }
 
-export function useIntervalMove(setCount: DispatchT, count:number) {
+export function useIntervalMove(setCount: DispatchT, count:number, setTime:number) {
   useEffect(() => {
     
-    const stop = getInterval(setCount)
+    const stop = getInterval(setCount, setTime)
     return () => {
       clearInterval(stop)
     }

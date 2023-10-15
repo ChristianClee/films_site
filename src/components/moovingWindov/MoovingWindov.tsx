@@ -7,7 +7,7 @@ import Indicator from './indicator/Indicator';
 
 
 
-const MoovingVindov: React.FC<{ pictures: ArrPictureT }> = ({ pictures }) => {
+const MoovingVindov: React.FC<{ pictures: ArrPictureT, setTime: number }> = ({ pictures, setTime}) => {
 
   const length = pictures.length
   const lineRef = useRef<HTMLDivElement>(null)
@@ -17,7 +17,7 @@ const MoovingVindov: React.FC<{ pictures: ArrPictureT }> = ({ pictures }) => {
   const [current, setCurrent] = useState<number>(startIndex)
  
   useFirstMove(lineRef)
-  useIntervalMove(setCount, count)
+  useIntervalMove(setCount, count, setTime)
   useMove(lineRef, pictures, current, count, setCurrent)
 
   return (
@@ -44,15 +44,18 @@ export default MoovingVindov;
 
 
 
-const Pictures: React.FC<{pictures: ArrPictureT}> = ({ pictures }) => {
+const Pictures: React.FC<{ pictures: ArrPictureT }> = ({ pictures }) => {
+  
   return (
     <>
       {
         pictures.map((item, index) => {
+          console.log()
+          const unicKey = String(Math.random()).slice(2, 6)
           return (
             <div
               className={style.elem}
-              key={`${item} + ${index}`}>
+              key={`${item} + ${unicKey}`}>
               <img src={item} alt="" />
             </div>
           )

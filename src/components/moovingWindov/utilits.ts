@@ -13,11 +13,11 @@ export function shiftLine(lineRef: RefDivT) {
 }
 
 
-export function getInterval(setCount: DispatchT): NodeJS.Timer {
+export function getInterval(setCount: DispatchT, setTime:number): NodeJS.Timer {
   const stop: NodeJS.Timer = setTimeout(
     () => {
       setCount( prev => prev + 1 )
-    }, 4000)
+    }, setTime)
   return stop
 }
 
@@ -52,13 +52,14 @@ export function moveRight(
   line.style.transform += `translateX(-${width}px)`
 
   setTimeout(() => {
-    
-    line.style.transition = ".0s"
-    line.style.transform += `translateX(${width}px)`
-    pictures.push(pictures[0])
-    pictures.shift()
-    setCurrent(count)
-  }, 615)
+     line.style.transition = ".0s"
+    setTimeout(() => {
+      line.style.transform += `translateX(${width}px)`
+      pictures.push(pictures[0])
+      pictures.shift()
+      setCurrent(count)
+    },25)
+  }, 610)
 }
 
 export function moveLeft(
@@ -73,9 +74,11 @@ export function moveLeft(
 
   setTimeout(() => {
     line.style.transition = "0s"
-    line.style.transform += `translateX(-${width}px)`
-    pictures.unshift(pictures[pictures.length-1])
-    pictures.pop()
-    setCurrent(count)
-  }, 615)
+    setTimeout(() => { 
+      line.style.transform += `translateX(-${width}px)`
+      pictures.unshift(pictures[pictures.length-1])
+      pictures.pop()
+      setCurrent(count)
+    },25)
+  }, 610)
 }

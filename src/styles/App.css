@@ -2,18 +2,24 @@ html{
   font-size: 100%;
 }
 #root{
+  width: 100%;
   min-height: 100%;
+  overflow: hidden;
 }
 
 .App{
-  padding: 0 .5rem;
-  /* background: green; */
-  min-height:  100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(254, 254, 254);
 }
 main{
+  padding: 0 .5rem;
   padding-top: var(--heightHeader);
   flex-grow: 1;
+  max-width: var(--maxWidth);
+  width: 100%;
 }
