@@ -5,9 +5,6 @@
 :root{
   --buttonsCollor:rgb(77, 155, 4);
   --headerColor: rgb(66, 66, 66);
+  --starBackground: rgb(255, 255, 255);
 }
-:root{
-  --movingElemSizeWidth: 35rem;
-  --movingElemSizeHeight: 25rem;
- 
-}
+

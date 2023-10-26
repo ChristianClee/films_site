@@ -1,0 +1,16 @@
+.wrapper{
+  border: 1px solid black;
+  height: 15rem;
+
+}
+
+.line{
+  display: flex;
+  gap: 2rem
+
+}
+.elem{
+  width: 8rem;
+  height: 10rem;
+}
+

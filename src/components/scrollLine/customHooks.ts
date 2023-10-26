@@ -1,16 +1,17 @@
 import { useEffect } from 'react'
 import { calcRemainScroll, calcScroll } from './utilits'
-import { RefHtmlT, RefMutBoolT, RefMutNumT } from  './types'
+import type { RefHtmlT, RefMutBoolT, RefMutNumT, StateDispatchT } from  './types'
 
 export function useListenerWindow(
   flagRef: RefMutBoolT,
   lineRef: RefHtmlT,
   moveMentXRef: RefMutNumT,
+  setCurrentScr: StateDispatchT,
 
 ) {
   function eventMouseup() {
     if (flagRef.current) {
-      calcRemainScroll(flagRef, lineRef, moveMentXRef)
+      calcRemainScroll(flagRef, lineRef, moveMentXRef, setCurrentScr)
     }
   }
     function eventMouseMove(e: MouseEvent) {

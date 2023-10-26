@@ -1,0 +1,53 @@
+.arrowsContainer{
+  /* background-color: red; */
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.arrows{
+  /* background-color: black;  */
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+.arrowContainer{
+  cursor: pointer;
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .5rem;
+  background-color: var(--buttonsCollor);
+}
+.arrowContainer:hover{
+  background-color: var(--headerColor);
+}
+.arrowContainer:active{
+  transform: scale(.95);
+  box-shadow: 0 0 15px 2px var(--headerColor);
+}
+
+
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  fill: rgb(255, 255, 255);  
+}
+.arrowLeft{
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  
+}
+.arrowRight{
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+
+
+@media(max-width: 550px){
+  .arrowsContainer{
+  margin-top: .5rem;
+}
+}

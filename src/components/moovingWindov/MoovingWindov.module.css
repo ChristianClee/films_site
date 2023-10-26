@@ -1,3 +1,13 @@
+:root{
+  --movingElemSizeWidth: 17rem;
+  --movingElemSizeHeight: 25rem;
+
+  --movingElemSizeWidthSmall: 14rem;
+  --movingElemSizeHeightSmall: 20rem;
+
+  --movingElemSizeWidthSmallest: 12rem;
+  --movingElemSizeHeightSmallest: 17rem;
+}
 .wrapper{
   position: relative;
   width: var(--movingElemSizeWidth);
@@ -5,8 +15,8 @@
   border-radius: 1rem;
   overflow: hidden;
   z-index: 23;
-
 }
+
 .wrapper:hover .leftSide
 {
    transform: translateX(0%);
@@ -59,6 +69,25 @@
   width: 100%;
   height: 100%;
   /* object-fit: fill; */
-
 }
 
+@media(max-width:765px){
+  .wrapper{
+    width: var(--movingElemSizeWidthSmall);
+    height: var(--movingElemSizeHeightSmall);
+  }
+  .elem{
+    flex: 0 0 var(--movingElemSizeWidthSmall) ;
+    height: var(--movingElemSizeHeightSmall) ;
+  }
+}
+@media(max-width:550px){
+  .wrapper{
+    width: var(--movingElemSizeWidthSmallest);
+    height: var(--movingElemSizeHeightSmallest);
+  }
+  .elem{
+    flex: 0 0 var(--movingElemSizeWidthSmallest) ;
+    height: var(--movingElemSizeHeightSmallest) ;
+  }
+}

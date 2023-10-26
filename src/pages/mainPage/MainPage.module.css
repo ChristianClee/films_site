@@ -1,5 +1,8 @@
 .wrapper{
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   
 }
 .flexContainer{
@@ -11,4 +14,13 @@
 }
 .flexContainer>:nth-child(2){
   flex-grow: 0;
+}
+
+@media(max-width: 550px){
+  .flexContainer{
+    display: block;
+  }
+  .flexContainer>:first-child{
+    margin: 0 auto;
+  }
 }

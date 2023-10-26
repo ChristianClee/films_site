@@ -4,7 +4,7 @@ import style from './Footer.module.css'
 
 const Footer:React.FC = () => {
   return (
-    <div>
+    <div className={style.footer}>
       footer
     </div>
   );

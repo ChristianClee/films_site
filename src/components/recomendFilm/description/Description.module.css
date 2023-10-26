@@ -1,0 +1,104 @@
+.name{
+  font-size: 2rem;
+  text-align: center;
+  color: orange;
+}
+.shortDescription{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.shortDescription span{
+  margin-left: .5rem;
+  color:  orange;
+}
+.infoContainer{
+  display: flex;
+  gap: .5rem;
+}
+
+.starsContainer{
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+.starsContainer p{
+  font-size: 1.4rem;
+}
+.starContainer{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem
+}
+.actorsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.actorsContainer p{
+  font-size: 1.2rem;
+}
+.actorsTitle{
+  font-size: 1.5rem;
+  align-self: center;
+}
+.btnsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  -ms-user-select: none; 
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+  user-select: none; 
+}
+.whatchBtn:hover{
+  background-color: var(--headerColor)
+}
+.whatchBtn span{
+  color: white;
+  font-size: 1.4rem;
+}
+.imgConteiner1{
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+}
+
+.imgSvg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke: var(--buttonsCollor);
+  
+}
+.imgSvg:hover{
+  stroke: var(--headerColor);
+}
+.imgConteiner{
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+}
+.whatchBtn{
+  background-color: var(--buttonsCollor);
+  width: 11rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5rem;
+}
+
+
+@media(max-width:550px){
+  .infoContainer{
+    flex-direction: column;  
+  }
+}

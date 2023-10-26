@@ -1,25 +1,38 @@
 import React from 'react';
 import style from './MainPage.module.css'
-import { arrPicture } from '../../constants/picturesArr'
 import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
 import ScrollLineRecomend from '../../components/scrollLineRecomend/ScrollLineRecomend'
+import {posters as post} from '../../constants/picturesArr'
+import RecomendFilm from '../../components/recomendFilm/RecomendFilm';
+import infoFilm from '../../constants/infoItem.json'
+// import pictures from '../../constants/pictures.json'
+import boevick from '../../constants/boevickPictures.json'
+import comedy from '../../constants/comedyPictures.json'
+import fantastic from '../../constants/fantasticPictures.json'
+import mult from '../../constants/multPictures.json'
+// import type { DataT} from '../../components/types'
 
-import ScrollLine from '../../components/scrollLine/ScrollLine';
 
-const MainPage: React.FC = () => {
+const MainPage: React.FC = (props) => {
+  console.log(props)
+
+
+
   return (
     <div className={style.wrapper}>
 
       <div className={style.flexContainer}>
-        <MoovingVindov pictures={arrPicture} setTime={10000} />
-        {/* <ScrollLine pictures={arrPicture} /> */}
-        <ScrollLineRecomend/>
+        <MoovingVindov pictures={post} setTime={10000} />
+        
+        <ScrollLineRecomend title={"рекомендованные"} pictures={boevick.docs} />
       </div>
-      {/* <ScrollLine pictures={arrPicture}/> */}
       
-      
-      
-     
+      <RecomendFilm infoFilm={infoFilm} />
+
+      <ScrollLineRecomend title={"комедии"} pictures={comedy.docs} />
+      <ScrollLineRecomend title={"фантастика"} pictures={fantastic.docs} />
+      <ScrollLineRecomend title={"мультики"} pictures={mult.docs} />
+
     </div>
   );
 }
