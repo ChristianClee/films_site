@@ -16,7 +16,7 @@ const PreviewFilmPage: React.FC = () => {
       <Traller filmData={filmData} />
       <Description filmData={filmData} />
       <BackDrop filmData={filmData} />
-      <Year filmData={filmData} />
+      <Year filmData={filmData}    />
       <Watchability filmData={filmData} />
     </div>
   );
