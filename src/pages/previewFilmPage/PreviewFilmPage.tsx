@@ -6,6 +6,7 @@ import type {PicturesId} from '../../components/types'
 const PreviewFilmPage: React.FC = () => {
   const location = useLocation()
   const filmData: PicturesId = JSON.parse(location.state.from)
+  
 
 
 
@@ -16,7 +17,7 @@ const PreviewFilmPage: React.FC = () => {
       <Traller filmData={filmData} />
       <Description filmData={filmData} />
       <BackDrop filmData={filmData} />
-      <Year filmData={filmData} />
+    
       <Watchability filmData={filmData} />
     </div>
   );
