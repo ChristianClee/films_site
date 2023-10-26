@@ -3,6 +3,7 @@ import style from './Footer.module.css'
 
 
 const Footer:React.FC = () => {
+  console.log('hello')
   return (
     <div className={style.footer}>
       footer
