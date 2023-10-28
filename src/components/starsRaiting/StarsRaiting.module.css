@@ -5,8 +5,8 @@
 }
 .star{
   position: relative;
-  width: 1rem;
-  height: 1rem;
+  width: var(--sizeSrar);
+  height: var(--sizeSrar);
   background-color: transparent;
 }
 .curtain{

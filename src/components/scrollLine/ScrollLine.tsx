@@ -1,19 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import style from './ScrollLine.module.css'
 import { useListenerWindow } from './customHooks'
 import { mousedown } from './utilits'
 import Arrows from './arrows/Arrows';
 import { Link } from 'react-router-dom';
-import { PicturesId } from '../types'
+import { PicturesId,TipeT } from '../types'
 
 
+type ScrollLineT = {
+  pictures: PicturesId[] | null,
+  actors: TipeT[] | null,
+  title: string,
+}
 
-const ScrollLine: React.FC<{ pictures: PicturesId[], title: string }> = ({ pictures, title}) => {
+const ScrollLine: React.FC<ScrollLineT> = ({ pictures, actors, title}) => {
   const flagRef = useRef(false)
   const moveMentXRef = useRef(0)
   const [scrollLeft, setCurrentScr] = useState<number>(0)
   const lineRef = useRef<HTMLDivElement>(null)
-
 
   useListenerWindow(flagRef, lineRef, moveMentXRef, setCurrentScr)
  
@@ -27,7 +31,7 @@ const ScrollLine: React.FC<{ pictures: PicturesId[], title: string }> = ({ pictu
         onMouseDown={(e) => mousedown(e, flagRef, moveMentXRef)}
         ref={lineRef}
       >
-        <Elements pictures={pictures} />
+        <Elements pictures={pictures} actors={actors} />
       </div>
     </div>
     
@@ -36,24 +40,68 @@ const ScrollLine: React.FC<{ pictures: PicturesId[], title: string }> = ({ pictu
 export default ScrollLine;
 
 
-const Elements: React.FC<{ pictures: PicturesId[] }> = ({ pictures }) => {
-  
-  
+
+
+type ElementsT = {
+  pictures: PicturesId[] | null,
+  actors: TipeT[] | null
+}
+
+const Elements: React.FC<ElementsT> = ({ pictures, actors }) => {
   return (
     <>
       {
-        pictures.map((item, index) => {
-          if (item?.poster?.previewUrl) {
-            return (
-              <Link to="./previewFilmPage" state={{ from: `${JSON.stringify(item)}` }} key={`${item} ${index} + ${Math.random()}`}>
-                <img
-                  className={style.element}
-                  src={item.poster.previewUrl} alt="" />
-              </Link>
-            )
-          }
-        })
+        pictures ? 
+          <Films pictures={pictures} />
+          :
+          actors ?
+            <Actors actors={actors} />
+            :
+            null
       }
     </>
-  )
+    )
 }
+
+//@ts-ignore
+const Films: React.FC<{ pictures: PicturesId[]}> = ({ pictures }) => {
+  return (
+    pictures.map((item, index) => {
+        if (item?.poster?.previewUrl) {
+          return (
+            <Link to="./previewFilmPage" state={{ from: `${JSON.stringify(item)}` }} key={`${item} ${index} + ${Math.random()}`}>
+              <img
+                className={style.element}
+                src={item.poster.previewUrl} alt="" />
+            </Link>
+          )
+        }
+    })
+  )
+ }
+
+
+//@ts-ignore
+const Actors: React.FC<{ actors: TipeT[] }> = ({ actors }) => {
+  return (
+    actors.map((item) => {
+      return (
+        <>
+          {
+            item.photo ? 
+              <div className={style.element2}>
+                <p className={style.element2Name}>{item.name }</p>
+                <img
+                  key={`${item} + ${Math.random()}`}
+                  className={style.element2Picture}
+                  src={item.photo} alt="" />
+              </div>
+              :
+              null
+          }
+        </>
+        
+      )
+    })
+  )
+ }

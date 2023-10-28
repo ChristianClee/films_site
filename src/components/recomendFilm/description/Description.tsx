@@ -1,17 +1,13 @@
 import React from 'react';
 import style from './Description.module.css'
-import { ReactComponent as Bookmark } from '../../../assets/img/svg/bookmark.svg'
-import { ReactComponent as Play } from '../../../assets/img/svg/play.svg'
-import { ReactComponent as Heart } from '../../../assets/img/svg/heart2.svg'
-import { ReactComponent as Info } from '../../../assets/img/svg/info.svg'
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
 import type { infoFilmT } from "../../types"
+import ButtonsBlock from '../../buttonBlock/ButtonBlock';
 
 
 const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
   return (
     <>
-
       <div className={style.shortDescription}>
         {infoFilm.shortDescription}
         <span>{infoFilm.genres[0].name}</span>
@@ -23,7 +19,7 @@ const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
       </div>
 
       <div className={style.btnsContainer}>
-        <ButtonsBlock />
+        <ButtonsBlock title="смотреть" />
       </div>
     </>
   );
@@ -32,30 +28,7 @@ export default Description;
 
 
 
-const ButtonsBlock: React.FC = () => {
-  return (
-    <>
-      <button className={style.whatchBtn}>
-        <span>смотреть</span>
-        <div className={style.imgConteiner1}>
-          <Play className={style.imgSvg} />
-        </div>
-      </button>
 
-      <button className={style.imgConteiner}>
-        <Bookmark className={style.imgSvg} />
-      </button>
-
-      <div className={style.imgConteiner}>
-        <Heart className={style.imgSvg} />
-      </div>
-
-      <button className={style.imgConteiner}>
-        <Info className={style.imgSvg} />
-      </button>
-    </>
-  )
-}
 
 const ShortInfo: React.FC<infoFilmT> = ({ infoFilm }) => {
   return (
@@ -63,11 +36,11 @@ const ShortInfo: React.FC<infoFilmT> = ({ infoFilm }) => {
       <div className={style.starsContainer}>
         <div className={style.starContainer}>
           <p>Критити</p>
-          <StarsRaiting raiting={infoFilm.rating.filmCritics} />
+          <StarsRaiting raiting={infoFilm.rating.filmCritics} sizeSrars='1rem'/>
         </div>
         <div className={style.starContainer}>
           <p>Зрители</p>
-          <StarsRaiting raiting={infoFilm.rating.kp} />
+          <StarsRaiting raiting={infoFilm.rating.kp} sizeSrars='1rem' />
         </div>
       </div>
 

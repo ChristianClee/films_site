@@ -55,15 +55,30 @@ type BackdropT = {
   previewUrl: string | null;
   url: string | null;
 }
+
+
+
 type CinemaT = {
-  items: {
-    logo: {
-    url: string | null
-    };
-    name: string | null;
-    url: string | null;
-  }[]
+  items: ItemT[]
 }
+export type ItemT = {
+  logo: {
+  url: string | null
+  };
+  name: string | null;
+  url: string | null;
+}
+
+export type TipeT = {
+  description: string | null;
+  enName: string | null;
+  enProfession: string | null;
+  id: number | null;
+  name: string | null;
+  photo: string | null;
+  profession: string | null;
+}
+
 
 export type PicturesId = {
   id: number | null;
@@ -75,5 +90,6 @@ export type PicturesId = {
   description: string | null;
   videos: VideoT | null;
   year: number | null;
-  watchability: CinemaT 
+  watchability: CinemaT;
+  persons: TipeT[];
 }

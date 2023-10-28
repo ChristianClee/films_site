@@ -3,7 +3,7 @@ import style from './StarsRaiting.module.css'
 import { ReactComponent as Star } from '../../assets/img/svg/star.svg'
 
 
-const StarsRaiting: React.FC<{ raiting: number | null }> = ({ raiting }) => {
+const StarsRaiting: React.FC<{ raiting: number | null, sizeSrars: string }> = ({ raiting, sizeSrars }) => {
 
   const integer: number = raiting ? Math.floor(raiting) : 0
   const float: number =  raiting ? getFloat(raiting) : 0
@@ -45,7 +45,8 @@ const StarsRaiting: React.FC<{ raiting: number | null }> = ({ raiting }) => {
                 return (
                   <StarRaiting
                     width={item}
-                    key={index + Math.random() }
+                    key={index + Math.random()}
+                    sizeSrars={sizeSrars}
                   />
                 )
               })
@@ -62,15 +63,15 @@ export default StarsRaiting;
 
 
 
-const StarRaiting: React.FC<{ width: string }> = ({ width }) => {
+const StarRaiting: React.FC<{ width: string, sizeSrars: string }> = ({ width, sizeSrars }) => {
 
   const styleWidth = { "--starFill": `${width}%` }
-
+  const sizeSrar = { '--sizeSrar': sizeSrars }
 
 
 
   return (
-    <div className={style.star}>
+    <div className={style.star} style={sizeSrar}>
       <Star className={style.imgSvg} />
       <span className={style.curtain} style={styleWidth}></span>
       <Star className={style.imgSvg2} />

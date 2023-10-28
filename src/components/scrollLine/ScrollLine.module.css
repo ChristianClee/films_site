@@ -12,6 +12,7 @@
   font-size: 2.5rem;
 }
 .line{
+  margin-top: 1rem;
   display: flex;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -26,9 +27,24 @@
   transition: .25s;
   transform: translateY(2rem);
 }
+
 .element:hover{
   transform: translateY(0px);
 }
+.element2Name{
+  text-align: center;
+  /* line-height: 4rem; */
+  height: 4rem;
+}
+.element2{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.element2Picture{
+    height: 15rem;
+}
+
 
 @media(max-width: 765px){
   .element{height: 12rem;}

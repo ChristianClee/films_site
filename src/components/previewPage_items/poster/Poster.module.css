@@ -1,0 +1,10 @@
+.posterWidth{
+  width: 100%;
+}
+@media(max-width: 1030px){
+  .posterWidth{
+    width: 50%;
+    /* max-width: 40rem; */
+    /* background-color: aqua; */
+  }
+}

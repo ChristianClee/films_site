@@ -1,111 +1,59 @@
 import React from 'react';
-import style from './PreviewFilmPage.module.css'
-import { useLocation } from 'react-router-dom'
-import type {PicturesId} from '../../components/types'
+import style from './PreviewFilmPage.module.css';
+import { useLocation } from 'react-router-dom';
+import type { PicturesId } from '../../components/types';
+import { posters } from '../../constants/picturesArr'
+import ButtonsBlock from '../../components/buttonBlock/ButtonBlock';
+import Watchability from '../../components/previewPage_items/watchability/Watchability';
+import Actors from '../../components/actors/Actors';
+import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
+import Poster from '../../components/previewPage_items/poster/Poster';
+import Traller from '../../components/previewPage_items/traller/Traller';
+import Description from '../../components/previewPage_items/description/Description';
+import Raiting from '../../components/previewPage_items/raiting/Raiting';
+import Year from '../../components/previewPage_items/year/Year';
+
 
 const PreviewFilmPage: React.FC = () => {
   const location = useLocation()
   const filmData: PicturesId = JSON.parse(location.state.from)
-  
 
 
 
   return (
     <div className={style.wrapper}>
+      <div className={style.body}>
+        <div className={style.row}>
+          <div className={style.column}>
+            <Poster filmData={filmData} />
+          </div>
 
-      <Poster filmData={filmData}/>
-      <Traller filmData={filmData} />
-      <Description filmData={filmData} />
-      <BackDrop filmData={filmData} />
-      <Year filmData={filmData}/>
-      <Watchability filmData={filmData} />
+          <div className={style.column}>
+            <Traller filmData={filmData} />
+            <ButtonsBlock title="треллер" />
+            <Watchability filmData={filmData} />
+            <Raiting filmData={filmData} />
+            <Year filmData={filmData} />
+            <Description filmData={filmData} />
+          </div>
+
+        </div>
+
+        <div className={style.row}>
+          <div className={style.actorsContainer}>
+            <Actors filmData={filmData} />
+          </div>
+
+        </div>
+      </div>
+
+      <div className={style.advertisement}>
+        <MoovingVindov pictures={posters} setTime={9500} />
+        <MoovingVindov pictures={[...posters]} setTime={11000} />
+      </div>
+
+
     </div>
   );
 }
 export default PreviewFilmPage;
-
-
-
-const Poster: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.poster && filmData.poster.previewUrl ?
-          <img src={filmData.poster.previewUrl} alt="" />
-          :
-          null
-      }
-    </>
-  )
-}
-const Traller: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.videos && filmData.videos.trailers && filmData.videos.trailers[0] && filmData.videos.trailers[0].url ?
-          <iframe
-            width="560"
-            height="315"
-            src={filmData.videos.trailers[0].url}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          >
-          </iframe>
-          :
-          null
-      }
-    </>
-  )
-}
-const Description: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.description && filmData.description ?
-          <p>{filmData.description}</p>
-          : null
-      }
-    </>
-  )
-}
-const BackDrop: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.backdrop && filmData.backdrop.previewUrl ?
-          <img src={filmData.backdrop.previewUrl} alt="" />
-          :
-          null
-      }
-    </>
-  )
-}
-const Year: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.year ?
-          <p>filmData.year</p>
-          :
-          null
-      }
-    </>
-  )
-}
-const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  return (
-    <>
-      {
-        filmData.watchability.items[0] ?
-          filmData.watchability.items.map((item, index) => {
-            if (item.url && item.name) return (
-              <a href={item.url} key={`${item}${index}`}>{item.name} helloosdfdsfdsfdsf </a>
-            )
-          }
-          )
-          :
-          null
-      }
-    </>
-  )
-}

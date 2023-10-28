@@ -4,6 +4,7 @@ import type * as CSS from 'csstype';
 
 declare module 'csstype' {
   interface Properties {
-    '--starFill'?:string;
+    '--starFill'?: string;
+    '--sizeSrar'?: string;
   }
 }
