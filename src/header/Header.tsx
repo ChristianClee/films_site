@@ -10,7 +10,8 @@ import ItemsElements from './components/ItemsElements/ItemsElements';
 import BurgerMenuBig from './components/burgerMenuBig/BurgerMenuBig';
 import BurgerMenuLittle from './components/burgerMenuLittle/BurgerMenuLittle';
 import PullOutMenu from './components/pullOutMenu/PullOutMenu';
-
+import { SEARCHFILMPAGE } from '../rout_path/paths'
+import { Link } from 'react-router-dom'
 
 
 const Header:React.FC = () => {
@@ -18,9 +19,12 @@ const Header:React.FC = () => {
     <header className={style.header}>
       <div className={[style.containerGreed, grid.container].join(" ")}>
 
-        <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
+        {/* <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
           <LogoElement/>
-        </div>
+        </div> */}
+        <Link to={SEARCHFILMPAGE} className={[style.flexAlighnContainer, grid.logo].join(" ")}>
+          <LogoElement/>
+        </Link>
         
         <div className={[style.flexAlighnContainer, grid.contacts].join(" ")}>
           <ContactsElement/>
