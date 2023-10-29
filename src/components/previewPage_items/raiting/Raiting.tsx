@@ -3,7 +3,7 @@ import style from './Raiting.module.css'
 import type { PicturesId } from '../../types'
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
 
-const Raiting: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
+const Raiting: React.FC<{ filmData: PicturesId, sizeSrars:string }> = ({ filmData, sizeSrars }) => {
   return (
     <div className={style.wrapper}>
       <h3>Оценки:</h3>
@@ -12,7 +12,7 @@ const Raiting: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
           filmData.rating?.kp ?
             <div className={style.raitingRow}>
               <p>Зрителей</p>
-              <StarsRaiting raiting={filmData.rating?.kp} sizeSrars='2rem' />
+              <StarsRaiting raiting={filmData.rating?.kp} sizeSrars={sizeSrars} />
             </div>
             :
             null
@@ -21,7 +21,7 @@ const Raiting: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
           filmData.rating?.filmCritics ?
             <div className={style.raitingRow}>
               <p>Критиков</p>
-              <StarsRaiting raiting={filmData.rating?.filmCritics} sizeSrars='2rem' />
+              <StarsRaiting raiting={filmData.rating?.filmCritics} sizeSrars={sizeSrars} />
             </div>
             :
             null

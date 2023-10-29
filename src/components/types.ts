@@ -24,6 +24,8 @@ export type infoFilmT = {
       site: string,
       type: string,
     }[]
+    watchability: CinemaT
+
   }
 }
 

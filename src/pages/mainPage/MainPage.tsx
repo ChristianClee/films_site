@@ -22,11 +22,10 @@ const MainPage: React.FC = (props) => {
 
       <div className={style.flexContainer}>
         <MoovingVindov pictures={post} setTime={10000} />
-        
         <ScrollLineRecomend title={"рекомендованные"} pictures={boevick.docs} />
       </div>
       
-      <RecomendFilm infoFilm={infoFilm} />
+      <RecomendFilm infoFilm={comedy.docs[0]} />
 
       <ScrollLineRecomend title={"комедии"} pictures={comedy.docs} />
       <ScrollLineRecomend title={"фантастика"} pictures={fantastic.docs} />

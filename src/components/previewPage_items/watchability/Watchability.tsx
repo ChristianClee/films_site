@@ -4,6 +4,12 @@ import type { PicturesId, ItemT } from '../../types'
 
 
 const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
+  filmData.watchability.items = filmData.watchability.items.map(item => {
+    if (item.name === 'НТВ-ПЛЮС Онлайн ТВ') item.name = 'НТВ-ПЛЮС'
+    return item
+  })
+
+
   return (
     <div className={style.wrapper}>
       {

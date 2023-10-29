@@ -1,23 +1,37 @@
 import React from 'react';
 import style from './Traller.module.css'
+import { PicturesId } from '../../types'
 
-type TrallerT = { trailer: string }
 
-const Traller: React.FC<TrallerT> = ({ trailer }) => {
+
+const Traller: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
+  console.log(infoFilm)
   return (
-    <div>
-      <iframe
-        className={style.video}
-        src={trailer}
-        title="YouTube video player"
+    
+    <>
+      {
+        infoFilm.videos
+        && infoFilm.videos.trailers
+        && infoFilm.videos.trailers[0]
+        && infoFilm.videos.trailers[0].url
+        &&
+        <div>
+          <iframe
+            className={style.video}
+            src={infoFilm.videos.trailers[0].url}
+            title="YouTube video player"
 
-        allow="accelerometer;
+            allow="accelerometer;
           autoplay; clipboard-write;
           encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      >
-      </iframe>
-    </div>
+            allowFullScreen
+          >
+          </iframe>
+        </div>
+      }
+    </>
+    
+
   );
 }
 export default Traller;

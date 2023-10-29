@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  /* background-color: bisque; */
 }
 
 .info{
@@ -14,7 +13,7 @@
 .containerLink{
   position: relative;
   display: flex;
-  background-color: rgb(12, 147, 8);
+  background-color: var(--buttonsCollor);
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -22,6 +21,12 @@
   border-radius: 1rem;
   color: white;
   height: 3rem;
+}
+.containerLink:hover{
+  background-color: var(--headerColor);
+}
+.containerLink:hover .logo{
+  transform: translateX(-.5rem);
 }
 
 .containerLink p{
@@ -39,7 +44,6 @@
   border-bottom-left-radius: 50%;
 }
 
-
 .logo{
   position: absolute;
   right: -.2rem;
@@ -48,4 +52,5 @@
   height: 3rem;
   border-radius: 50%;
   border: 2px solid ;
+  transition: .25s;
 }

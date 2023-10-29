@@ -1,21 +1,27 @@
 import React from 'react';
 import style from './Description.module.css'
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
-import type { infoFilmT } from "../../types"
+import type { PicturesId } from "../../types"
 import ButtonsBlock from '../../buttonBlock/ButtonBlock';
 import { useActions } from '../../../hooks/redux'; 
+import { useSelector } from 'react-redux';
+import { selectFilm } from "../../../redux/selectors/filmSelector"
+import Watchability from '../../previewPage_items/watchability/Watchability';
+import Raiting from '../../previewPage_items/raiting/Raiting'
+import {ReactComponent as Goback} from '../../../assets/img/svg/go-back.svg'
 
 
-const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
+const Description: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
   const {toggleRecomendFilmMoveState } = useActions()
-
+  const { recomendFilmMoveState } = useSelector(selectFilm)
+  const whatchState = recomendFilmMoveState ? [style.whatchBtn, style.whatchBtnActive].join(" "): style.whatchBtn
+  const whatchButtonBack = recomendFilmMoveState ? [style.btnState, style.btnStateActive].join(" ") : style.btnState
 
   return (
-    <>
+    <div className={style.wrapper}>
       <div className={style.shortDescription}>
-        {infoFilm.shortDescription}
-        <span>{infoFilm.genres[0].name}</span>
-        <span>{infoFilm.genres[1].name}</span>
+        {/* {infoFilm.shortDescription} */}
+        Здесь должно быть короткое описание!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus eligendi, aliquid nostrum nihil quo!
       </div>
 
       <div className={style.infoContainer}>
@@ -25,7 +31,18 @@ const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
       <div className={style.btnsContainer}>
         <ButtonsBlock title="смотреть" dispatch={toggleRecomendFilmMoveState}/>
       </div>
-    </>
+
+      <div className={whatchState}>
+        <Watchability filmData={infoFilm} />
+      </div>
+      <div className={whatchButtonBack}>
+        <Goback
+          className={style.goback}
+          onClick={() => toggleRecomendFilmMoveState()}
+        />
+      </div>
+      
+    </div>
   );
 }
 export default Description;
@@ -34,17 +51,12 @@ export default Description;
 
 
 
-const ShortInfo: React.FC<infoFilmT> = ({ infoFilm }) => {
+const ShortInfo: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
   return (
     <>
       <div className={style.starsContainer}>
         <div className={style.starContainer}>
-          <p>Критити</p>
-          <StarsRaiting raiting={infoFilm.rating.filmCritics} sizeSrars='1rem'/>
-        </div>
-        <div className={style.starContainer}>
-          <p>Зрители</p>
-          <StarsRaiting raiting={infoFilm.rating.kp} sizeSrars='1rem' />
+          <Raiting filmData={infoFilm} sizeSrars='1rem'/>
         </div>
       </div>
 
@@ -52,9 +64,15 @@ const ShortInfo: React.FC<infoFilmT> = ({ infoFilm }) => {
         <div className={style.actorsTitle}>
           Актеры
         </div>
-        <p>Жан Рено</p>
-        <p>Анделло де Л'Aкрузо Д'этруA</p>
-        <p>Софи Лоран</p>
+        {
+          infoFilm.persons.map((item, index) => {
+            if (index < 4) {
+              return (
+                <p key={item.name}>{item.name }</p>
+              )
+            }
+          })
+        }
       </div>
     </>
   )

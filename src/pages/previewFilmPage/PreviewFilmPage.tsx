@@ -37,7 +37,7 @@ const PreviewFilmPage: React.FC = () => {
             <Traller filmData={filmData} />
             <ButtonsBlock title="треллер" dispatch={toggleTrallerState } />
             <Watchability filmData={filmData} />
-            <Raiting filmData={filmData} />
+            <Raiting filmData={filmData} sizeSrars='2rem'/>
             <Year filmData={filmData} />
             <Description filmData={filmData} />
           </div>
