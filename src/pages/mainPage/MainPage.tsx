@@ -14,7 +14,6 @@ import mult from '../../constants/multPictures.json'
 
 
 const MainPage: React.FC = (props) => {
-  console.log(props)
 
 
 

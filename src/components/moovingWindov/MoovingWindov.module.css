@@ -14,7 +14,7 @@
   height: var(--movingElemSizeHeight);
   border-radius: 1rem;
   overflow: hidden;
-  z-index: 23;
+  z-index: 3;
 }
 
 .wrapper:hover .leftSide

@@ -1,0 +1,17 @@
+.element{
+  height: 15rem;
+  transition: .25s;
+  transform: translateY(2rem);
+}
+.element:hover{
+  transform: translateY(0px);
+}
+@media(max-width: 765px){
+  .element{height: 12rem;}
+}
+
+@media(max-width:550px){
+  .title{
+    font-size: 1.5rem;
+  }
+}

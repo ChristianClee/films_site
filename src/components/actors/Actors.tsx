@@ -17,9 +17,7 @@ const Actors: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
 
   
   return (
-    <div className={style.wrapper}>
-      <ScrollLine pictures={null} actors={actors} title='Актёры' />
-    </div>
+    <ScrollLine pictures={null} actors={actors} title='Актёры' />
   )
 }
 export default Actors;

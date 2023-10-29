@@ -13,7 +13,9 @@ const Traller: React.FC<TrallerT> = ({ trailer }) => {
 
         allow="accelerometer;
           autoplay; clipboard-write;
-          encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+          encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      >
       </iframe>
     </div>
   );

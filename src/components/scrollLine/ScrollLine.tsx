@@ -3,8 +3,9 @@ import style from './ScrollLine.module.css'
 import { useListenerWindow } from './customHooks'
 import { mousedown } from './utilits'
 import Arrows from './arrows/Arrows';
-import { Link } from 'react-router-dom';
 import { PicturesId,TipeT } from '../types'
+import Films from './films/Films';
+import Actors from './actors/Actors';
 
 
 type ScrollLineT = {
@@ -63,45 +64,6 @@ const Elements: React.FC<ElementsT> = ({ pictures, actors }) => {
     )
 }
 
-//@ts-ignore
-const Films: React.FC<{ pictures: PicturesId[]}> = ({ pictures }) => {
-  return (
-    pictures.map((item, index) => {
-        if (item?.poster?.previewUrl) {
-          return (
-            <Link to="./previewFilmPage" state={{ from: `${JSON.stringify(item)}` }} key={`${item} ${index} + ${Math.random()}`}>
-              <img
-                className={style.element}
-                src={item.poster.previewUrl} alt="" />
-            </Link>
-          )
-        }
-    })
-  )
- }
 
 
 //@ts-ignore
-const Actors: React.FC<{ actors: TipeT[] }> = ({ actors }) => {
-  return (
-    actors.map((item) => {
-      return (
-        <>
-          {
-            item.photo ? 
-              <div className={style.element2}>
-                <p className={style.element2Name}>{item.name }</p>
-                <img
-                  key={`${item} + ${Math.random()}`}
-                  className={style.element2Picture}
-                  src={item.photo} alt="" />
-              </div>
-              :
-              null
-          }
-        </>
-        
-      )
-    })
-  )
- }

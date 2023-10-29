@@ -49,14 +49,19 @@ p{
 }
 
 @media(max-width: 1030px){
-  .row{
-    /* display: block; */
+  .body{
+    display: flex;
     flex-direction: column;
-
-    /* align-items: center; */
-    /* gap: 1rem; */
+    gap: 3rem;
+  }
+  .row{
+    flex-direction: column;
+    /* background-color: aquamarine; */
   }
   .column{
     align-items: center;
   }
+  .body{
+  width: 100%;
+}
 }

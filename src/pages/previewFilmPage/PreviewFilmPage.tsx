@@ -43,8 +43,8 @@ const PreviewFilmPage: React.FC = () => {
           <div className={style.actorsContainer}>
             <Actors filmData={filmData} />
           </div>
-
         </div>
+        
       </div>
 
       <div className={style.advertisement}>
