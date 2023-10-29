@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { reducer as reducerBook } from './reducers/booksReduser'
+import { reducer as reducerFilm } from '../reducers/filmReduser'
 export const store = configureStore({
   reducer: {
-    book: reducerBook,
+    film: reducerFilm,
   },
 })
 

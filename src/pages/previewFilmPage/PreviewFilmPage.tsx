@@ -12,11 +12,16 @@ import Traller from '../../components/previewPage_items/traller/Traller';
 import Description from '../../components/previewPage_items/description/Description';
 import Raiting from '../../components/previewPage_items/raiting/Raiting';
 import Year from '../../components/previewPage_items/year/Year';
+import { useActions } from "../../hooks/redux"
+import type { trallerItemsT } from '../../components/trallerTypes' 
+
 
 
 const PreviewFilmPage: React.FC = () => {
   const location = useLocation()
   const filmData: PicturesId = JSON.parse(location.state.from)
+  const { toggleTrallerState } = useActions()
+
 
 
 
@@ -30,7 +35,7 @@ const PreviewFilmPage: React.FC = () => {
 
           <div className={style.column}>
             <Traller filmData={filmData} />
-            <ButtonsBlock title="треллер" />
+            <ButtonsBlock title="треллер" dispatch={toggleTrallerState } />
             <Watchability filmData={filmData} />
             <Raiting filmData={filmData} />
             <Year filmData={filmData} />

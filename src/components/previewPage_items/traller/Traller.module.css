@@ -6,14 +6,18 @@
   height: 100%;
   z-index: 4;
   background-color: rgba(0, 0, 0, 0.656) ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: none;
 }
+
 .traller{
   width: 80%;
   height: 80%;
+}
+
+.backFonActive{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

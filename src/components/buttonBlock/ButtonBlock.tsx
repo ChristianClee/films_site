@@ -4,10 +4,17 @@ import { ReactComponent as Play } from '../../assets/img/svg/play.svg'
 import { ReactComponent as Heart } from '../../assets/img/svg/heart2.svg'
 import { ReactComponent as Info } from '../../assets/img/svg/info.svg'
 import { ReactComponent as Bookmark } from '../../assets/img/svg/bookmark.svg'
+import type { trallerItemsT } from '../trallerTypes'
 
-const ButtonsBlock: React.FC<{ title: string }> = ({title}) => {
+
+const ButtonsBlock: React.FC<{ title: string, dispatch: () => void, }> = ({ title, dispatch }) => {
+
   return (
-    <div className={style.wrapper}>
+    <div className={style.wrapper}
+      onClick={() =>
+        dispatch()
+      }
+    >
       <button className={style.whatchBtn}>
         <span>{title}</span>
         <Play className={style.imgSvgPlay} />

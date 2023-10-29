@@ -3,9 +3,13 @@ import style from './Description.module.css'
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
 import type { infoFilmT } from "../../types"
 import ButtonsBlock from '../../buttonBlock/ButtonBlock';
+import { useActions } from '../../../hooks/redux'; 
 
 
 const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
+  const {toggleRecomendFilmMoveState } = useActions()
+
+
   return (
     <>
       <div className={style.shortDescription}>
@@ -19,7 +23,7 @@ const Description: React.FC<infoFilmT> = ({ infoFilm }) => {
       </div>
 
       <div className={style.btnsContainer}>
-        <ButtonsBlock title="смотреть" />
+        <ButtonsBlock title="смотреть" dispatch={toggleRecomendFilmMoveState}/>
       </div>
     </>
   );
