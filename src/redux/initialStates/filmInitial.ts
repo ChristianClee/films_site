@@ -1,9 +1,10 @@
-type BooksInitialT  = {
+type FilmsInitialT  = {
   trallerState: boolean;
   recomendFilmMoveState: boolean;
 }
 
-export const booksInitial: BooksInitialT = {
+export const filmsInitial: FilmsInitialT = {
   trallerState: false,
   recomendFilmMoveState: false,
 }
+

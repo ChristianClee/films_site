@@ -3,12 +3,14 @@ import { useDispatch} from 'react-redux'
 import type { AppDispatch } from '../redux/store/store'
 import { bindActionCreators } from '@reduxjs/toolkit'
 import { actions as filmAction} from '../redux/reducers/filmReduser'
+import { actions as fetchingAction} from '../redux/reducers/fetchingReduser'
 
 export const useAppDispatch: () => AppDispatch = useDispatch
 
 
   const rootActions = {
-  ...filmAction,
+    ...filmAction,
+    ...fetchingAction
 }
 
 

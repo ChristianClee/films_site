@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { booksInitial } from '../initialStates/filmInitial'
+import { filmsInitial } from '../initialStates/filmInitial'
 
 export const filmSlice = createSlice({
   name: 'film',
-  initialState:booksInitial,
+  initialState:filmsInitial,
   reducers: {
     toggleTrallerState(state) {
       state.trallerState = !state.trallerState
