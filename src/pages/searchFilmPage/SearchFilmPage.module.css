@@ -1,0 +1,28 @@
+.wrapper{
+  margin-top: 2rem;
+  display: flex;
+}
+.body{
+  flex: 0 1 70rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.advertisment{
+  flex-grow: 1;
+  background-color: rgba(0, 0, 255, 0.334);
+}
+.itemFilm{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.poster{
+  width: 11rem;
+}
+.description{
+  flex: 0 1 30%;
+}
+.raiting{
+}

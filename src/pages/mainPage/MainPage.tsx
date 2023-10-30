@@ -4,8 +4,7 @@ import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
 import ScrollLineRecomend from '../../components/scrollLineRecomend/ScrollLineRecomend'
 import {posters as post} from '../../constants/picturesArr'
 import RecomendFilm from '../../components/recomendFilm/RecomendFilm';
-import infoFilm from '../../constants/infoItem.json'
-// import pictures from '../../constants/pictures.json'
+
 import boevick from '../../constants/boevickPictures.json'
 import comedy from '../../constants/comedyPictures.json'
 import fantastic from '../../constants/fantasticPictures.json'

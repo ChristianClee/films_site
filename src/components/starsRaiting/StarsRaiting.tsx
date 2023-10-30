@@ -4,12 +4,10 @@ import { ReactComponent as Star } from '../../assets/img/svg/star.svg'
 
 
 const StarsRaiting: React.FC<{ raiting: number | null, sizeSrars: string }> = ({ raiting, sizeSrars }) => {
-
   const integer: number = raiting ? Math.floor(raiting) : 0
   const float: number =  raiting ? getFloat(raiting) : 0
   const arr = getArray(integer, float)
 
-  // console.log(arr)
 
   function getFloat(digit: number): number {
     const integer = Math.floor(digit)
