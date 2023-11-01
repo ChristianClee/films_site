@@ -19,12 +19,12 @@ const Header:React.FC = () => {
     <header className={style.header}>
       <div className={[style.containerGreed, grid.container].join(" ")}>
 
-        {/* <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
+        <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
           <LogoElement/>
-        </div> */}
-        <Link to={SEARCHFILMPAGE} className={[style.flexAlighnContainer, grid.logo].join(" ")}>
+        </div>
+        {/* <Link to={SEARCHFILMPAGE} className={[style.flexAlighnContainer, grid.logo].join(" ")}>
           <LogoElement/>
-        </Link>
+        </Link> */}
         
         <div className={[style.flexAlighnContainer, grid.contacts].join(" ")}>
           <ContactsElement/>

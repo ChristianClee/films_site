@@ -32,7 +32,7 @@ export const fetchingSlice = createSlice({
 
 
     builder.addCase(fetchIdFilm.fulfilled, (state, action) => {
-      
+      state.filmId = action.payload
     })
 
     }

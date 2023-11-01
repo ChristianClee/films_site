@@ -4,6 +4,8 @@ import { ReactComponent as MagnySvg } from '../../../assets/img/svg/magnifying-g
 import { useSelector } from 'react-redux';
 import { selectFetching } from '../../../redux/selectors/fetchingSelector';
 import { useActions } from '../../../hooks/redux';
+import { Link } from 'react-router-dom'
+import { SEARCHFILMPAGE } from '../../../rout_path/paths'
 // import { fetchBooks } from '../../../redux/actions/fetchingActions';
 // import { useDispatch } from 'react-redux';
 
@@ -22,12 +24,12 @@ const Search: React.FC = () => {
         value={inputValue}
         onChange={(e) => { getInputValue(e.currentTarget.value) }}
       />
-      <button
+      <Link to={"/" + SEARCHFILMPAGE}
         className={style.searchButton}
         onClick={() => fetchFilms(inputValue) }
       >
         <MagnySvg className={style.svgImg} />
-      </button>
+      </Link>
     </div>
           
   );

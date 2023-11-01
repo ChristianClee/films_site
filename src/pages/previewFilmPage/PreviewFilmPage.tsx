@@ -14,51 +14,102 @@ import Raiting from '../../components/previewPage_items/raiting/Raiting';
 import Year from '../../components/previewPage_items/year/Year';
 import { useActions } from "../../hooks/redux"
 import type { trallerItemsT } from '../../components/trallerTypes' 
-
+import { useSelector } from 'react-redux';
+import { selectFetching } from '../../redux/selectors/fetchingSelector';
 
 
 const PreviewFilmPage: React.FC = () => {
+  const { filmId }  = useSelector(selectFetching)
   const location = useLocation()
-  const filmData: PicturesId = JSON.parse(location.state.from)
+  const filmData: PicturesId | string = JSON.parse(location.state.from)
   const { toggleTrallerState } = useActions()
+  // console.log(filmId)
 
 
 
+  if ( typeof filmData === "string") {
+    return (
+      <>
+        {
+          filmId ?
+            <div className={style.wrapper}>
+              <div className={style.body}>
+                <div className={style.row}>
+                  <div className={style.column}>
+                    <Poster filmData={filmId} />
+                  </div>
 
-  return (
-    <div className={style.wrapper}>
-      <div className={style.body}>
-        <div className={style.row}>
-          <div className={style.column}>
-            <Poster filmData={filmData} />
+                  <div className={style.column}>
+                    <Traller filmData={filmId} />
+                    <ButtonsBlock title="треллер" dispatch={toggleTrallerState} />
+                    {/* <Watchability filmData={filmId} /> */}
+                    <Raiting filmData={filmId} sizeSrars='2rem' />
+                    <Year filmData={filmId} />
+                    <Description filmData={filmId} />
+                  </div>
+
+                </div>
+
+                <div className={style.row}>
+                  <div className={style.actorsContainer}>
+                    <Actors filmData={filmId} />
+                  </div>
+                </div>
+
+              </div>
+
+              <div className={style.advertisement}>
+                <MoovingVindov pictures={posters} setTime={9500} />
+                <MoovingVindov pictures={[...posters]} setTime={11000} />
+              </div>
+
+
+            </div>
+            :
+            <div>hello</div>
+        }
+      </>
+     
+      
+      
+    )
+  } else {
+    return (
+      <div className={style.wrapper}>
+        <div className={style.body}>
+          <div className={style.row}>
+            <div className={style.column}>
+              <Poster filmData={filmData} />
+            </div>
+
+            <div className={style.column}>
+              <Traller filmData={filmData} />
+              <ButtonsBlock title="треллер" dispatch={toggleTrallerState} />
+              <Watchability filmData={filmData} />
+              <Raiting filmData={filmData} sizeSrars='2rem' />
+              <Year filmData={filmData} />
+              <Description filmData={filmData} />
+            </div>
+
           </div>
 
-          <div className={style.column}>
-            <Traller filmData={filmData} />
-            <ButtonsBlock title="треллер" dispatch={toggleTrallerState } />
-            <Watchability filmData={filmData} />
-            <Raiting filmData={filmData} sizeSrars='2rem'/>
-            <Year filmData={filmData} />
-            <Description filmData={filmData} />
+          <div className={style.row}>
+            <div className={style.actorsContainer}>
+              <Actors filmData={filmData} />
+            </div>
           </div>
 
         </div>
 
-        <div className={style.row}>
-          <div className={style.actorsContainer}>
-            <Actors filmData={filmData} />
-          </div>
+        <div className={style.advertisement}>
+          <MoovingVindov pictures={posters} setTime={9500} />
+          <MoovingVindov pictures={[...posters]} setTime={11000} />
         </div>
-        
+
+
       </div>
+    );
+  }
 
-      <div className={style.advertisement}>
-        <MoovingVindov pictures={posters} setTime={9500} />
-        <MoovingVindov pictures={[...posters]} setTime={11000} />
-      </div>
-
-
-    </div>
-  );
 }
 export default PreviewFilmPage;

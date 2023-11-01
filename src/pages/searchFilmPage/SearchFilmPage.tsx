@@ -6,11 +6,14 @@ import StarsRaiting from '../../components/starsRaiting/StarsRaiting';
 import Raiting from '../../components/previewPage_items/raiting/Raiting';
 import { useSelector } from 'react-redux';
 import { selectFetching } from '../../redux/selectors/fetchingSelector';
+import { Link } from "react-router-dom"
+import { PREVIEWFILMPAGE } from '../../rout_path/paths'
+import { useActions } from '../../hooks/redux';
 
 
 const SearchFilmPage: React.FC = () => {
   const { fetchFilms } = useSelector(selectFetching)
-  console.log(fetchFilms)
+
 
 
   return (
@@ -28,9 +31,12 @@ export default SearchFilmPage;
 
 
 const ElemFilmPage: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => { 
+  const { fetchIdFilm } = useActions()
   return (
-    <div className={style.itemFilm}
-      onClick={() => { console.log(elemFilms.id)}}
+    <Link to={"/" + PREVIEWFILMPAGE}
+      className={style.itemFilm} 
+      onClick={() => fetchIdFilm(String(elemFilms.id)) }
+      state={{ from: `${JSON.stringify(String(elemFilms.id))}` }}
     >
       {
         elemFilms.poster
@@ -64,11 +70,6 @@ const ElemFilmPage: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => {
         <StarsRaiting raiting={elemFilms.rating} sizeSrars='1.4rem'/>
       </div>
       
-
-  
-
-
-      
-    </div>
+    </Link>
   )
 }
