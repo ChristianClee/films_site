@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { reducer as reducerFilm } from '../reducers/filmReduser'
-import { reducer as reducerFetching } from '../reducers/fetchingReduser'
+import { reducer as reducerFilm } from '../slices/filmReduser'
+import { reducer as reducerFetching } from '../slices/fetchingReduser'
 
 export const store = configureStore({
   reducer: {

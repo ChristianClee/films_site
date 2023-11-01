@@ -5,7 +5,6 @@ import { PicturesId } from '../../types'
 
 
 const Traller: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
-  console.log(infoFilm)
   return (
     
     <>

@@ -1,18 +1,23 @@
 import React from 'react';
 import style from './SearchFilmPage.module.css'
-import mult from '../../constants/multPictures.json'
-import type { PicturesId } from '../../components/types'
+
+import type { FilmItem, FetchT } from '../../components/fetchingTypes'
 import StarsRaiting from '../../components/starsRaiting/StarsRaiting';
 import Raiting from '../../components/previewPage_items/raiting/Raiting';
+import { useSelector } from 'react-redux';
+import { selectFetching } from '../../redux/selectors/fetchingSelector';
 
 
 const SearchFilmPage: React.FC = () => {
-  const arrFilms = mult.docs
+  const { fetchFilms } = useSelector(selectFetching)
+  console.log(fetchFilms)
+
+
   return (
     <div className={style.wrapper}>
       <div className={style.body}>
         {
-          arrFilms.map((item, index) => <ElemFilmPage elemFilms={item} key={index}/>)
+          fetchFilms.map((item, index) => <ElemFilmPage elemFilms={item} key={index}/>)
         }
       </div>
       <div className={style.advertisment}></div>
@@ -22,59 +27,45 @@ const SearchFilmPage: React.FC = () => {
 export default SearchFilmPage;
 
 
-const ElemFilmPage: React.FC<{ elemFilms: PicturesId }> = ({ elemFilms }) => { 
+const ElemFilmPage: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => { 
   return (
-    <div className={style.itemFilm}>
+    <div className={style.itemFilm}
+      onClick={() => { console.log(elemFilms.id)}}
+    >
       {
         elemFilms.poster
-        && elemFilms.poster.previewUrl
         &&
         <img
           className={style.poster}
-          src={elemFilms.poster.previewUrl} alt=""
+          src={elemFilms.poster} alt=""
         />
       }
       <div className={style.description}>
-        <h3>{elemFilms.name}</h3>
-        <h3>{elemFilms.year}
-          
-  
-        </h3>
-        <h3>жанр</h3>
-        <p>
-          {
-            elemFilms.genres
-            && elemFilms.genres[0]
-            && elemFilms.genres[0].name
-            &&
-            <span>{" " + elemFilms.genres[0].name}</span>
-          }
-          {
-            elemFilms.genres
-            && elemFilms.genres[1]
-            && elemFilms.genres[1].name
-            &&
-            <span>{" " + elemFilms.genres[1].name}</span>
-          }
-        </p>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorem architecto ea maxime quidem laborum saepe quaerat ratione mollitia consequatur?</p>
+        {
+          elemFilms.name &&
+          <h3>{elemFilms.name}</h3>
+        }
+        {
+          elemFilms.year && 
+          <h3>год {elemFilms.year}</h3>
+        }
+        {
+          elemFilms.genres.length > 0 &&
+          <h3>
+              жанр <span>{elemFilms.genres[0]} {elemFilms.genres[1] && elemFilms.genres[1]}</span>
+          </h3>
+        }
+        
+        <p>{elemFilms.shortDescription}</p>
         
       </div>
 
       <div className={style.raiting}>
-        <Raiting filmData={elemFilms} sizeSrars='1.2rem'/>
+        <StarsRaiting raiting={elemFilms.rating} sizeSrars='1.4rem'/>
       </div>
+      
 
-      <div className={style.actors}>
-        <h3>Aктёры</h3>
-        {elemFilms.persons.map((item, index) => {
-          if (index < 4) {
-            return <p key={`${item.id} index`}>{item.name}</p>
-          }
-        })}
-        <p>...</p>
-      </div>
+  
 
 
       

@@ -18,6 +18,9 @@
   gap: 1rem;
   align-items: center;
 }
+.itemFilm:hover{
+  box-shadow: 0 0 10px 2px black;
+}
 .poster{
   width: 11rem;
 }

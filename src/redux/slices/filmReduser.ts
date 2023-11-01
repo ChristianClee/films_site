@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { FILM } from '../../constants/reduxSlicesName'
 import { filmsInitial } from '../initialStates/filmInitial'
 
 export const filmSlice = createSlice({
-  name: 'film',
+  name: FILM,
   initialState:filmsInitial,
   reducers: {
     toggleTrallerState(state) {
