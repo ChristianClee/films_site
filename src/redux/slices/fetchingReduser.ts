@@ -16,8 +16,8 @@ export const fetchingSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchFilms.pending, (state, action) => {
-      console.log('download')
     })
+    
     builder.addCase(fetchFilms.fulfilled, (state, action: PayloadAction<FetchT>) => {
       state.fetchFilms = action.payload.docs
       state.page = action.payload.page

@@ -21,13 +21,18 @@ import { selectFetching } from '../../redux/selectors/fetchingSelector';
 const PreviewFilmPage: React.FC = () => {
   const { filmId }  = useSelector(selectFetching)
   const location = useLocation()
-  const filmData: PicturesId | string = JSON.parse(location.state.from)
+
+  let filmData: PicturesId | null = null
+  if (location?.state?.from) {
+    filmData = JSON.parse(location.state.from)
+  }
+
   const { toggleTrallerState } = useActions()
-  // console.log(filmId)
 
 
 
-  if ( typeof filmData === "string") {
+
+  if (!filmData) {
     return (
       <>
         {

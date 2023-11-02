@@ -10,7 +10,6 @@ export function scrollPluss(lineRef: RefHtmlT, currentScr: number, setCurrentScr
     const scrollLeft_ = currentScr
     let scroll = clientWidth + scrollLeft_
 
-    console.log({clientWidth})
     
     if (fullScroll < scroll) {
       scroll = fullScroll
