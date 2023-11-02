@@ -36,7 +36,6 @@ const ElemFilmPage: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => {
     <Link to={"/" + PREVIEWFILMPAGE}
       className={style.itemFilm} 
       onClick={() => fetchIdFilm(String(elemFilms.id)) }
-      // state={{ from: `${JSON.stringify(String(elemFilms.id))}` }}
     >
       {
         elemFilms.poster
