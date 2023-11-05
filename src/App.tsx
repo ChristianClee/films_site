@@ -21,7 +21,6 @@ function App() {
           <Route path={SEARCHFILMPAGE} element={<SearchFilmPage/>} />
         </Route>
       </Routes>
-      
     </>
   );
 }

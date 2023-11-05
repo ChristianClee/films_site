@@ -1,0 +1,19 @@
+.wrapper{
+  background-color: rgba(255, 255, 255, 0.483);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 1rem;
+  transform: translateY(-30vh);
+  opacity: 0;
+  transition: .5s;
+  
+}
+.wrapperActive{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.inscript{
+  font-size: 2rem;
+}
+

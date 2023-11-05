@@ -16,6 +16,9 @@ export const filmSlice = createSlice({
     falseTrallerState(state) {
       state.trallerState = false
     },
+    togglePopUpContacts(state) {
+      state.popUpContacts = !state.popUpContacts
+    }
   },
 
 })

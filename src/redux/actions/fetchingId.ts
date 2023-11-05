@@ -3,17 +3,14 @@ import { FETCHING } from '../../constants/reduxSlicesName'
 import { FetchT, FilmItem } from '../../components/fetchingTypes'
 
 
-const page = `page=1`
-const limit = `limit=10`
 const key = { 'X-API-KEY': '84V9Y55-Z63MR19-QY7VD56-P4YK8YF' }
-const request = `https://api.kinopoisk.dev/v1.2/movie/search?${page}&${limit}`
+const request = `https://api.kinopoisk.dev/v1.3/movie/`
 
 
-export const fetchFilms = createAsyncThunk(
-  `${FETCHING}/fetchBooks`,
+export const fetchIdFilm = createAsyncThunk(
+  `${FETCHING}/fetchIdFilm`,
   async (query: string, {rejectWithValue}) => {
-    let url = `${request}&query=${query}`
-
+    let url = `${request}${query}`
 
     try {
       const responce = await fetch(url, { headers: key })

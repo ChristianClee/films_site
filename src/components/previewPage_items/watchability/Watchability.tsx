@@ -1,20 +1,22 @@
 import React from 'react';
 import style from './Watchability.module.css'
 import type { PicturesId, ItemT } from '../../types'
-
+import { changeItem } from './utilits'
 
 const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-  // console.log(filmData)
-  filmData.watchability.items = filmData.watchability.items.map(item => {
-    if (item.name === 'НТВ-ПЛЮС Онлайн ТВ') item.name = 'НТВ-ПЛЮС'
-    return item
-  })
+
+  let items: ItemT[] | null = null
+  if (filmData.watchability && filmData.watchability.items && filmData.watchability.items[0]) {
+    items = changeItem(filmData.watchability.items, 'НТВ-ПЛЮС Онлайн ТВ', 'НТВ-ПЛЮС')
+  }
+  
+  
 
 
   return (
     <div className={style.wrapper}>
       {
-        filmData.watchability.items[0] && filmData.watchability.items && filmData.watchability ?
+        items && items[0] ?
           <h3 className={style.info}>Смотреть на:</h3>
           :
           null
@@ -22,8 +24,8 @@ const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
 
       <div className={style.stars}>
         {
-          filmData.watchability.items[0] && filmData.watchability.items && filmData.watchability ?
-            filmData.watchability.items.map((item, index) => {
+          items && items[0] ?
+            items.map((item, index) => {
               if (item.url && item.name) return (
 
                 <a href={item.url} className={style.containerLink} key={`${item}${index}`}>

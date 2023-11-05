@@ -1,0 +1,45 @@
+
+  [
+    {"id": 666,
+    "name": "Форсаж",
+    "poster": "https://imagetmdb.com/t/p/original/uPzO7DHR1Z3zZQExKp5X4ABUu79.png",
+    "rating": 7.5,
+    "shortDescription": "lorem hello every one hwo know me and him sdfdfss asda ssddasd asdsagfd sdfds",
+    "year": 2023, "genres": [
+      "математика",
+      "алгебра"
+    ],
+    "movieLength": 124},
+    {"id": 666,
+    "name": "Форсаж",
+    "poster": "https://imagetmdb.com/t/p/original/uPzO7DHR1Z3zZQExKp5X4ABUu79.png",
+    "rating": 7.5,
+    "shortDescription": "lorem hello every one hwo know me and him sdfdfss asda ssddasd asdsagfd sdfds",
+    "year": 2023, "genres": [
+      "математика",
+      "алгебра"
+    ],
+    "movieLength": 124},
+    {"id": 666,
+    "name": "Форсаж",
+    "poster": "https://imagetmdb.com/t/p/original/uPzO7DHR1Z3zZQExKp5X4ABUu79.png",
+    "rating": 7.5,
+    "shortDescription": "lorem hello every one hwo know me and him sdfdfss asda ssddasd asdsagfd sdfds",
+    "year": 2023, "genres": [
+      "математика",
+      "алгебра"
+    ],
+    "movieLength": 124},
+    {
+      "id": 666,
+      "name": "Форсаж",
+      "poster": "https://imagetmdb.com/t/p/original/uPzO7DHR1Z3zZQExKp5X4ABUu79.png",
+      "rating": 7.5,
+      "shortDescription": "lorem hello every one hwo know me and him sdfdfss asda ssddasd asdsagfd sdfds",
+      "year": 2023, "genres": [
+        "математика",
+        "алгебра"
+      ],
+      "movieLength": 124
+    }
+  ]

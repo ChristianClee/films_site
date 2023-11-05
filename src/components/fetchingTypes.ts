@@ -3,7 +3,7 @@ export type FetchT = {
   limit: number;
   page: number;
   pages: number;
-  totall: number;
+  total: number;
 }
 
 export type FilmItem = {

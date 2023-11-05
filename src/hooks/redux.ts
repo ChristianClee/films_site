@@ -4,8 +4,8 @@ import type { AppDispatch } from '../redux/store/store'
 import { bindActionCreators } from '@reduxjs/toolkit'
 import { actions as filmAction} from '../redux/slices/filmReduser'
 import { actions as fetchingAction} from '../redux/slices/fetchingReduser'
-import { fetchFilms } from '../redux/actions/fetchingActions'
-import { fetchIdFilm } from '../redux/actions/fetchingIdActions'
+import { fetchFilms } from '../redux/actions/fetchingQuery'
+import { fetchIdFilm } from '../redux/actions/fetchingId'
 
 export const useAppDispatch: () => AppDispatch = useDispatch
 

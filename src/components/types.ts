@@ -61,7 +61,7 @@ type BackdropT = {
 
 
 type CinemaT = {
-  items: ItemT[]
+  items: ItemT[] | null;
 }
 export type ItemT = {
   logo: {

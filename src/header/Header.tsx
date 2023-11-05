@@ -14,7 +14,9 @@ import { SEARCHFILMPAGE } from '../rout_path/paths'
 import { Link } from 'react-router-dom'
 
 
-const Header:React.FC = () => {
+const Header: React.FC = () => {
+  
+
   return (
     <header className={style.header}>
       <div className={[style.containerGreed, grid.container].join(" ")}>
@@ -22,14 +24,13 @@ const Header:React.FC = () => {
         <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
           <LogoElement/>
         </div>
-        {/* <Link to={SEARCHFILMPAGE} className={[style.flexAlighnContainer, grid.logo].join(" ")}>
-          <LogoElement/>
-        </Link> */}
+
         
         <div className={[style.flexAlighnContainer, grid.contacts].join(" ")}>
           <ContactsElement/>
         </div>
-
+        
+        
         <div className={[style.flexAlighnContainer, grid.search].join(" ")}>
           <Search/>
         </div>
