@@ -2,15 +2,15 @@ import React from 'react';
 import style from './Poster.module.css'
 import type { FilmItem } from '../../fetchingTypes'
 
-const Poster: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => {
+const Poster: React.FC<{ poster: string | null | undefined}> = ({ poster }) => {
   return (
     <div className={style.wrapper}>
       {
-        elemFilms.poster
+        poster
         &&
         <img
           className={style.poster}
-          src={elemFilms.poster} alt=""
+          src={poster} alt=""
         />
       }
     </div>

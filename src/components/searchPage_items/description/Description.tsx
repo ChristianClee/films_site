@@ -3,6 +3,7 @@ import style from './Description.module.css'
 import type { FilmItem } from '../../fetchingTypes'
 import ButtonTwo from '../../buttons/buttonTwo/ButtonTwo';
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
+import type {PicturesId} from '../../../components/types'
 
 const Description: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => {
 
@@ -15,32 +16,16 @@ const Description: React.FC<{ elemFilms: FilmItem }> = ({ elemFilms }) => {
       }
       {
         elemFilms.year &&
-        <h3>год <span>{elemFilms.year}</span> </h3>
-
+        <h3>год <span>{elemFilms.year}</span></h3>
       }
       {
+        elemFilms.genres &&
         elemFilms.genres.length > 0 &&
         <h3>
           жанр <span>{elemFilms.genres[0]} {elemFilms.genres[1] && elemFilms.genres[1]}</span>
         </h3>
       }
       
-
-      {/* {
-        elemFilms.shortDescription ?
-          <button
-            className={style.descriptionBtn}
-            onClick={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-            }}
-          >
-            описание
-          </button>
-          :
-          null
-      } */}
-
 
     </div>
   );

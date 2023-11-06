@@ -13,16 +13,13 @@
 }
 .advertisment{
   position: sticky;
-  top:20%;
+  top:50vh;
   flex-shrink: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
+  transform: translateY(-45%);
   gap: 2rem;
-  /* transform: translateY(-20%); */
-}
-.containerWindow{
-
 }
 
 
@@ -30,6 +27,11 @@
   box-shadow: 0 0 10px 2px black;
 }
 .buttonPosition{
+}
 
+@media (max-width: 950px){
+  .advertisment{
+    display: none;
+  }
 }
 

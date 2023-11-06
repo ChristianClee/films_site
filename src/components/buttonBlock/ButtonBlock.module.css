@@ -33,12 +33,14 @@
   width: 2rem;
   height: 2rem;
   background: transparent;
+
 }
 .imgConteiner{
   position: relative;
   width: 3rem;
   height: 3rem;
   background: transparent;
+  cursor: pointer;
 }
 .imgSvg{
   position: absolute;

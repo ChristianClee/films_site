@@ -4,18 +4,14 @@ import ScrollLine from '../scrollLine/ScrollLine';
 import { PicturesId } from '../types'
 
 
-
-
-  
-  
 const ScrollLineRecomend: React.FC<{ pictures: PicturesId[], title: string }> = ({ pictures, title }) => {
 
   return (
     <div className={style.wrapper}>
       <ScrollLine pictures={pictures} actors={null} title={title} />
-      <button className={style.btn}>
+      {/* <button className={style.btn}>
         больше фильмов
-      </button>
+      </button> */}
     </div>
   );
 }

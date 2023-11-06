@@ -21,6 +21,7 @@ const Description: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
     <div className={style.wrapper}>
       <div className={style.shortDescription}>
         {/* {infoFilm.shortDescription} */}
+        
         Здесь должно быть короткое описание!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus eligendi, aliquid nostrum nihil quo!
       </div>
 
@@ -29,7 +30,7 @@ const Description: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
       </div>
 
       <div className={style.btnsContainer}>
-        <ButtonsBlock title="смотреть" dispatch={toggleRecomendFilmMoveState}/>
+        <ButtonsBlock title="смотреть" dispatch={toggleRecomendFilmMoveState} idFilm={infoFilm} />
       </div>
 
       <div className={whatchState}>

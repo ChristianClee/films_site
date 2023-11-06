@@ -3,7 +3,7 @@ import style from './StarsRaiting.module.css'
 import { ReactComponent as Star } from '../../assets/img/svg/star.svg'
 
 
-const StarsRaiting: React.FC<{ raiting: number | null, sizeSrars: string }> = ({ raiting, sizeSrars }) => {
+const StarsRaiting: React.FC<{ raiting: number | null | undefined, sizeSrars: string }> = ({ raiting, sizeSrars }) => {
   const integer: number = raiting ? Math.floor(raiting) : 0
   const float: number =  raiting ? getFloat(raiting) : 0
   const arr = getArray(integer, float)

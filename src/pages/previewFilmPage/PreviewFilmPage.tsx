@@ -32,7 +32,7 @@ const PreviewFilmPage: React.FC<{filmData: PicturesId }> = ({ filmData }) => {
 
             <div className={style.column}>
               <Traller filmData={filmData} />
-              <ButtonsBlock title="треллер" dispatch={toggleTrallerState} />
+              <ButtonsBlock title="треллер" dispatch={toggleTrallerState} idFilm={filmData} />
               <Watchability filmData={filmData} />
               <Raiting filmData={filmData} sizeSrars='2rem' />
               <Year filmData={filmData} />

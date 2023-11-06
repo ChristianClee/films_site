@@ -12,7 +12,7 @@ const ElementsFilmPage: React.FC<{ queryFilms: FilmItem[] }> = ({ queryFilms }) 
       {
         queryFilms.map((item, index) => {
           if (index < limitView) {
-            return <ElementFilmPage elemFilms={item} key={index} />
+            return <ElementFilmPage elemFilms={item} elemFilmLiked={null} key={index} />
           }
         }
         )

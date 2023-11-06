@@ -31,7 +31,7 @@
     display: none;
   }
 }
-@media(max-width:650px){
+/* @media(max-width:650px){
  .itemContainer{
   flex-direction: row;
   font-size: 1rem;
@@ -42,4 +42,4 @@
   fill: white;
 }
 
-}
+} */

@@ -39,9 +39,9 @@ const Header: React.FC = () => {
           <ItemsElements/>
         </div>
         
-        <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
+        {/* <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
           <BurgerMenuLittle/>
-        </div>
+        </div> */}
 
         <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
           <BurgerMenuBig/>

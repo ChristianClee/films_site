@@ -16,8 +16,8 @@
   fill: white;
 }
 
-@media(max-width: 800px){
+/* @media(max-width: 800px){
   .wrapper {
     display: none;
   }
-}
+} */

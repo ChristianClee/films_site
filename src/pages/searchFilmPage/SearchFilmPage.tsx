@@ -22,8 +22,8 @@ const SearchFilmPage: React.FC = () => {
       <div className={style.body}>
 
         <div>
-          {/* <ElementsFilmPage queryFilms={queryFilms} /> */}
-          <ElementsFilmPage queryFilms={items} />
+          <ElementsFilmPage queryFilms={queryFilms} />
+          {/* <ElementsFilmPage queryFilms={items} /> */}
         </div>
 
         <div className={style.buttonPosition}>
@@ -35,10 +35,8 @@ const SearchFilmPage: React.FC = () => {
       </div>
 
       <div className={style.advertisment}>
-        {/* <div className={style.containerWindow}> */}
           <MoovingVindov setTime={9000} pictures={posters} />
           <MoovingVindov setTime={3000} pictures={[...posters]} />
-        {/* </div> */}
       </div>
     </div>
   );
