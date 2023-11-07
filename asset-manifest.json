@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/films_site/static/css/main.2f7663cb.css",
+    "main.css": "/films_site/static/css/main.e36ff1cc.css",
     "main.js": "/films_site/static/js/main.2022a216.js",
-    "static/media/white-background.jpg": "/films_site/static/media/white-background.bfb1e4e66a7be5701cfd.jpg",
     "static/media/bumaga.jpg": "/films_site/static/media/bumaga.8f41baa6a2de3b2e73cc.jpg",
     "static/media/fan.jpg": "/films_site/static/media/fan.54693ac6421ba4b40e67.jpg",
     "static/media/art-guba.jpg": "/films_site/static/media/art-guba.e3c89733ab1fb180383e.jpg",
@@ -22,11 +21,11 @@
     "static/media/magnifying-glass.svg": "/films_site/static/media/magnifying-glass.f1c155409ccf0ed94807c0ff44d59272.svg",
     "static/media/person.svg": "/films_site/static/media/person.61c3513e73dd071ee901f11aaa69234b.svg",
     "index.html": "/films_site/index.html",
-    "main.2f7663cb.css.map": "/films_site/static/css/main.2f7663cb.css.map",
+    "main.e36ff1cc.css.map": "/films_site/static/css/main.e36ff1cc.css.map",
     "main.2022a216.js.map": "/films_site/static/js/main.2022a216.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f7663cb.css",
+    "static/css/main.e36ff1cc.css",
     "static/js/main.2022a216.js"
   ]
 }
