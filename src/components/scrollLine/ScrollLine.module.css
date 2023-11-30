@@ -10,19 +10,28 @@
   top: 1rem;
   left: 0;
   font-size: 2.5rem;
+
 }
 .line{
   margin-top: 1rem;
   display: flex;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: hidden;
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none; 
+
   gap: 2rem;
   cursor: grab;
 }
+.line::-webkit-scrollbar {
+  width: 0px;
+}
 
-
+@media(max-width: 750px){
+  .title{
+    font-size: 1.9rem;
+  }
+}
 
 

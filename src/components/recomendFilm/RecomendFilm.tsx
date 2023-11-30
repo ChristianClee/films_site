@@ -7,7 +7,7 @@ import Description from './description/Description';
 
 
 const RecomendFilm: React.FC<{infoFilm: PicturesId}> = ({ infoFilm }) => {
-
+  console.log(infoFilm)
   
   return (
     <div className={style.wrapper}>

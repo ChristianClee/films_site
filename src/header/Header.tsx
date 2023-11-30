@@ -21,8 +21,8 @@ const Header: React.FC = () => {
     <header className={style.header}>
       <div className={[style.containerGreed, grid.container].join(" ")}>
 
-        <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
-          <LogoElement/>
+        <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
+          <BurgerMenuBig />
         </div>
 
         
@@ -43,9 +43,10 @@ const Header: React.FC = () => {
           <BurgerMenuLittle/>
         </div> */}
 
-        <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
-          <BurgerMenuBig/>
-        </div>
+        
+        {/* <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
+          <LogoElement />
+        </div> */}
         
       </div>
       {/* <PullOutMenu/> */}

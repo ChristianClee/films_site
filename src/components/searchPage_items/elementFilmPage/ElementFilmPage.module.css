@@ -41,9 +41,16 @@
   height: 5rem;
   background-color: transparent;
 }
+.picture{
+  fill: rgb(46, 133, 46);
+  width: 100%;
+  height: 100%;
+  max-width: 4rem;
+  max-height: 4rem;
+}
 .description:hover .picture{
   /* border: 2px solid black; */
-  fill: red;
+  fill: rgb(162, 37, 37);
 }
 
 
@@ -85,7 +92,18 @@
   top: 50%;
   opacity: 1;
 }
-
+.remove{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+.remove:hover{
+  fill:red;
+}
 
 @media(max-width: 550px){
   .wrapper{

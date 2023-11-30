@@ -25,6 +25,9 @@ export const filmSlice = createSlice({
       const condition = state.likedMovie.some(i => i.id === film_id)
       if (condition) state.likedMovie = state.likedMovie.filter(i => i.id !== film_id)
       else state.likedMovie.push(action.payload)
+    },
+    remainLikedId(state, action: PayloadAction<number>) {
+      state.likedMovie = state.likedMovie.filter(i => i.id !== action.payload)
     }
   },
 

@@ -9,7 +9,7 @@ import boevick from '../../constants/boevickPictures.json'
 import comedy from '../../constants/comedyPictures.json'
 import fantastic from '../../constants/fantasticPictures.json'
 import mult from '../../constants/multPictures.json'
-// import type { DataT} from '../../components/types'
+
 
 
 const MainPage: React.FC = (props) => {
@@ -21,14 +21,13 @@ const MainPage: React.FC = (props) => {
 
       <div className={style.flexContainer}>
         <MoovingVindov pictures={post} setTime={10000} />
-        <ScrollLineRecomend title={"рекомендованные"} pictures={boevick.docs} />
+        <ScrollLineRecomend title={"Популярные"} pictures={boevick.docs} />
       </div>
       
       <RecomendFilm infoFilm={comedy.docs[0]} />
-
-      <ScrollLineRecomend title={"комедии"} pictures={comedy.docs} />
-      <ScrollLineRecomend title={"фантастика"} pictures={fantastic.docs} />
-      <ScrollLineRecomend title={"мультики"} pictures={mult.docs} />
+      <ScrollLineRecomend title={"Комедии"} pictures={comedy.docs} />
+      <ScrollLineRecomend title={"Фантастика"} pictures={fantastic.docs} />
+      <ScrollLineRecomend title={"Мультики"} pictures={mult.docs} />
 
     </div>
   );

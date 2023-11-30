@@ -3,6 +3,7 @@ import style from './Watchability.module.css'
 import type { PicturesId, ItemT } from '../../types'
 import { changeItem } from './utilits'
 
+
 const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
 
   let items: ItemT[] | null = null
@@ -11,8 +12,6 @@ const Watchability: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
   }
   
   
-
-
   return (
     <div className={style.wrapper}>
       {

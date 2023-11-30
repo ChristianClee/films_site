@@ -10,17 +10,19 @@ import Poster from '../poster/Poster';
 import Description from '../description/Description';
 import { ReactComponent as Ribbon } from '../../../assets/img/svg/certificate.svg'
 import Raiting from '../../previewPage_items/raiting/Raiting';
-
+import {ReactComponent as Remove} from '../../../assets/img/svg/remove.svg'
 
 
 type ElementFilmPageT = { elemFilms: FilmItem | null, elemFilmLiked: PicturesId | null }
   
 const ElementFilmPage: React.FC<ElementFilmPageT> = ({ elemFilms, elemFilmLiked }) => {
-  const { fetchIdFilm } = useActions()
+  const { fetchIdFilm, remainLikedId } = useActions()
   const [message, setMessage] = useState(false)
   const backFon = message ? style.fonActive : style.fonPassive
   const describeMessage = message ? [style.messageDescPassive, style.messageDescActive].join(" ") : style.messageDescPassive
   
+
+
   if (elemFilms) {
     return (
       <div className={style.wrapper}>
@@ -97,13 +99,24 @@ const ElementFilmPage: React.FC<ElementFilmPageT> = ({ elemFilms, elemFilmLiked 
               {elemFilmLiked.name}
             </div>
             <div >
-              {/* <Raiting filmData={elemFilmLiked} sizeSrars='1.4rem'/> */}
               <StarsRaiting raiting={elemFilmLiked?.rating?.kp} sizeSrars='1.4rem' />
             </div>
-
           </div>
 
-        </Link>
+          <button
+            style={{ background: "red" }}
+            onClick={(e) => {
+              e.preventDefault()
+              if (elemFilmLiked.id) {
+                remainLikedId(elemFilmLiked.id)
+              }
+            }}
+          >
+            <Remove className={style.remove} />
+          </button>  
+          
+         
+          </Link>
       </div>
     )
   } else {

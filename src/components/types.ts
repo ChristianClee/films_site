@@ -94,4 +94,5 @@ export type PicturesId = {
   year: number | null;
   watchability: CinemaT;
   persons: TipeT[];
+  shortDescription: string | null;
 }

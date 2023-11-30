@@ -8,7 +8,7 @@
   
 }
 .logo{
-  grid-area: logo;
+  grid-area: burger;
 }
 .contacts{
   grid-area: contacts;
@@ -23,7 +23,7 @@
   
 }
 .burger{
-  grid-area: burger;
+  grid-area: logo;
 }
 
 @media(max-width: 1000px){

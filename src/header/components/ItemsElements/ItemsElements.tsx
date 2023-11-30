@@ -12,6 +12,8 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectFilm } from '../../../redux/selectors/filmSelector';
 
+
+
 const ItemsElements: React.FC = () => {
   const { likedMovie } = useSelector(selectFilm)
 
@@ -25,9 +27,8 @@ const ItemsElements: React.FC = () => {
             :
             <HeartSvg className={style.svgImgMedium} />
         }
-        
         <span className={style.count}>{likedMovie.length}</span>
-        <span className={style.itemInscript}>liked</span>
+        {/* <span className={style.itemInscript}>liked</span> */}
       </Link>
 
       {/* <div className={style.itemContainer}>

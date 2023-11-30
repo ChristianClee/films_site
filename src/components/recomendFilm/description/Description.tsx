@@ -20,9 +20,9 @@ const Description: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
   return (
     <div className={style.wrapper}>
       <div className={style.shortDescription}>
-        {/* {infoFilm.shortDescription} */}
+        {infoFilm.shortDescription}
         
-        Здесь должно быть короткое описание!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus eligendi, aliquid nostrum nihil quo!
+        {/* Здесь должно быть короткое описание!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus eligendi, aliquid nostrum nihil quo! */}
       </div>
 
       <div className={style.infoContainer}>

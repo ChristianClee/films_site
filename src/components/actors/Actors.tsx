@@ -7,9 +7,6 @@ import ScrollLine from '../scrollLine/ScrollLine';
 const Actors: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
 
 
-
-
-  
   const actors: TipeT[] = filmData
     .persons
     .map(elem => elem )
