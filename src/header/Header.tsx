@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   
 
   return (
-    <header className={style.header}>
+    <header>
       <div className={[style.containerGreed, grid.container].join(" ")}>
 
         <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
