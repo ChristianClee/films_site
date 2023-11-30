@@ -6,6 +6,7 @@ import PopUpMessage from './components/popUpMessage/globalPopUp/PopUpMessage';
 import ContactMessage from './components/contactMessage/ContactMessage';
 
 const Layout: React.FC = () => {
+
   return (
     <div className="App">
       <Header />

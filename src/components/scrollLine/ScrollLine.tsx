@@ -35,7 +35,6 @@ const ScrollLine: React.FC<ScrollLineT> = ({ pictures, actors, title}) => {
         <Elements pictures={pictures} actors={actors} />
       </div>
     </div>
-    
   );
 }
 export default ScrollLine;
@@ -63,7 +62,3 @@ const Elements: React.FC<ElementsT> = ({ pictures, actors }) => {
     </>
     )
 }
-
-
-
-//@ts-ignore

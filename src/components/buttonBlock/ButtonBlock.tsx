@@ -16,7 +16,7 @@ const ButtonsBlock: React.FC<{ title: string, dispatch: () => void, idFilm: Pict
   const [heard, setHeard] = useState(false)
   const { addRemainLikedId } = useActions()
   const { likedMovie }  = useSelector(selectFilm)
-  console.log( likedMovie)
+
 
   return (
     <div className={style.wrapper}>
