@@ -14,8 +14,6 @@ import mult from '../../constants/multPictures.json'
 
 const MainPage: React.FC = (props) => {
 
-
-
   return (
     <div className={style.wrapper}>
 

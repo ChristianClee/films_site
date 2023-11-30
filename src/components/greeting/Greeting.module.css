@@ -1,0 +1,71 @@
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.logoBlock{
+  display: flex;
+  width: 80%;
+  height: 20%;
+  justify-content: center;
+  gap: 1rem;
+}
+.logoReact{
+  transform: rotate(360deg) ;
+  animation: logo-React 15s linear infinite;
+  fill: #61DAFB;  
+}
+
+.logoRedux{
+  animation: logo-Redux 5s linear infinite alternate;
+  
+}
+.logoTypeScript{
+  animation: logo-TypeScript 5s linear infinite alternate;
+}
+
+.title{
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+@keyframes logo-React {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes logo-Redux {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes logo-TypeScript {
+  0% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}

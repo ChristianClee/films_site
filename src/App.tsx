@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './styles/all.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import MainPage from './pages/mainPage/MainPage';
 import Layout from './Layout';
 import SeparatorPreviewPage from './pages/previewFilmPage/SeparatorPreviewPage';

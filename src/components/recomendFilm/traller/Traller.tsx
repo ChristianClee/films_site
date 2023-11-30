@@ -19,10 +19,9 @@ const Traller: React.FC<{ infoFilm: PicturesId }> = ({ infoFilm }) => {
             className={style.video}
             src={infoFilm.videos.trailers[0].url}
             title="YouTube video player"
-
             allow="accelerometer;
-          autoplay; clipboard-write;
-          encrypted-media; gyroscope; picture-in-picture; web-share"
+              autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture; "
             allowFullScreen
           >
           </iframe>
