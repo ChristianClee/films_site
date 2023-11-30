@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/films_site/static/css/main.e36ff1cc.css",
-    "main.js": "/films_site/static/js/main.2022a216.js",
+    "main.css": "/films_site/static/css/main.08e7e7b1.css",
+    "main.js": "/films_site/static/js/main.85d2e8e1.js",
     "static/media/bumaga.jpg": "/films_site/static/media/bumaga.8f41baa6a2de3b2e73cc.jpg",
     "static/media/fan.jpg": "/films_site/static/media/fan.54693ac6421ba4b40e67.jpg",
     "static/media/art-guba.jpg": "/films_site/static/media/art-guba.e3c89733ab1fb180383e.jpg",
     "static/media/supergeroj-betmen.jpg": "/films_site/static/media/supergeroj-betmen.cdc90691b53a45a84a47.jpg",
     "static/media/illustracia.jpg": "/films_site/static/media/illustracia.031249ec40797aa69ac4.jpg",
     "static/media/book-little.svg": "/films_site/static/media/book-little.5710ca4d67e19960e1f9fe6fa75612fe.svg",
+    "static/media/react-svgrepo.svg": "/films_site/static/media/react-svgrepo.d8339787b91ac4189d1e0be96608381e.svg",
+    "static/media/redux-svgrepo.svg": "/films_site/static/media/redux-svgrepo.23af57808df5f0fd8284f80b4161d76f.svg",
     "static/media/heart.svg": "/films_site/static/media/heart.33f63e40c41f272f3bfa36aeb5980430.svg",
     "static/media/star.svg": "/films_site/static/media/star.415d35fb2a37a3676fa0a12dd41066a0.svg",
     "static/media/phone-2.svg": "/films_site/static/media/phone-2.06fb12b386d74df51d6e58bfa7b66c14.svg",
     "static/media/arrow-simple.svg": "/films_site/static/media/arrow-simple.cbebc386b1cccb89453c5e2ea383408e.svg",
+    "static/media/typescript-svgrepo.svg": "/films_site/static/media/typescript-svgrepo.958caffcefa241deaa57d2a5fc2aec7f.svg",
     "static/media/go-back.svg": "/films_site/static/media/go-back.02ca5160ce44c23a7de80552b5454f95.svg",
     "static/media/play.svg": "/films_site/static/media/play.1400253f0fd269349ea25018e69ac950.svg",
     "static/media/certificate.svg": "/films_site/static/media/certificate.b7326dece72c2b6891c8b2dcdbbcdfe8.svg",
@@ -21,11 +24,11 @@
     "static/media/magnifying-glass.svg": "/films_site/static/media/magnifying-glass.f1c155409ccf0ed94807c0ff44d59272.svg",
     "static/media/person.svg": "/films_site/static/media/person.61c3513e73dd071ee901f11aaa69234b.svg",
     "index.html": "/films_site/index.html",
-    "main.e36ff1cc.css.map": "/films_site/static/css/main.e36ff1cc.css.map",
-    "main.2022a216.js.map": "/films_site/static/js/main.2022a216.js.map"
+    "main.08e7e7b1.css.map": "/films_site/static/css/main.08e7e7b1.css.map",
+    "main.85d2e8e1.js.map": "/films_site/static/js/main.85d2e8e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.e36ff1cc.css",
-    "static/js/main.2022a216.js"
+    "static/css/main.08e7e7b1.css",
+    "static/js/main.85d2e8e1.js"
   ]
 }
