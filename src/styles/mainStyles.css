@@ -1,4 +1,3 @@
-
 #root{
   width: 100%;
   height: 100%;
@@ -7,12 +6,15 @@
 .App{
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* width: 100%; */
-  /* min-height: 100vh; */
-  background-color: rgb(78, 11, 11);
+  min-height: 100vh;
 }
+.container{
+  max-width: var(--maxWidth);
+  padding: 0 .5rem;
+  margin: 0 auto;
+}
+
 header{
   width: 100%;  
   position: fixed;
@@ -20,19 +22,18 @@ header{
   left: 0;
   height: var(--heightHeader);
   z-index: 50;
+  background-color: var( --headerColor);
 }
 
 main{
-  padding: 0 .5rem;
   margin-top: var(--heightHeader);
-  flex: 1 0 100%;
+  flex: 1 0 50%;
   max-width: var(--maxWidth);
   width: 100%;
 }
 
 footer{
-  background-color: black;
-  /* height: 5rem; */
+  background-color: var( --headerColor);
   width: 100%;
   flex: 0 0 15rem;
 }

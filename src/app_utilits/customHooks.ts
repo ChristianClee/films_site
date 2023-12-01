@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import { useActions } from '../hooks/redux';
-import { PREVIEWFILMPAGE } from '../rout_path/paths'
+import { PREVIEWFILMPAGE } from '../constants/paths'
 import { useSelector } from 'react-redux';
 import { selectFilm } from '../redux/selectors/filmSelector'
 

@@ -6,7 +6,7 @@ import { ReactComponent as HeartRedSvg } from '../../../assets/img/svg/heardRed.
 import { ReactComponent as EyeSvg } from '../../../assets/img/svg/eye.svg'
 import { ReactComponent as CartSvg } from '../../../assets/img/svg/cart.svg'
 import { ReactComponent as RubleSvg } from '../../../assets/img/svg/ruble-2.svg'
-import { LIKEDPAGE } from '../../../rout_path/paths'
+import { LIKEDPAGE } from '../../../constants/paths'
 import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';

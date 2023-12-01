@@ -5,11 +5,10 @@ import { useSelector } from 'react-redux';
 import { selectFetching } from '../../redux/selectors/fetchingSelector';
 import { useActions } from '../../hooks/redux';
 import ElementFilmPage from '../../components/searchPage_items/elementFilmPage/ElementFilmPage';
-import type { FilmItem } from '../../components/fetchingTypes'
 import ElementsFilmPage from '../../components/searchPage_items/elementsFilmPage/ElementsFilmPage';
-import items from '../../constants/searchItem.json'
 import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
-import { posters } from '../../constants/picturesArr'
+import { posters } from '../../constants/datafilms/picturesArr'
+import type { FilmItem } from '../../components/fetchingTypes'
 
 const SearchFilmPage: React.FC = () => {
   const { queryFilms, limitView, pages } = useSelector(selectFetching)
@@ -35,8 +34,8 @@ const SearchFilmPage: React.FC = () => {
       </div>
 
       <div className={style.advertisment}>
-          <MoovingVindov setTime={9000} pictures={posters} />
-          <MoovingVindov setTime={3000} pictures={[...posters]} />
+        <MoovingVindov setTime={9000} pictures={posters} />
+        <MoovingVindov setTime={3000} pictures={[...posters]} />
       </div>
     </div>
   );

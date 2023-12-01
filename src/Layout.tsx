@@ -15,7 +15,9 @@ const Layout: React.FC = () => {
     <div className="App">
       <Header />
       <main>
-        <Outlet/>
+        <div className='container'>
+          <Outlet />
+        </div>
       </main>
       <Footer />
 

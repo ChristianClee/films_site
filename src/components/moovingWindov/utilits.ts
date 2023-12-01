@@ -1,5 +1,5 @@
 import type { DispatchT, RefDivT } from "./types"
-import type {ArrPictureT } from "../../constants/picturesArr"
+import type {ArrPictureT } from "../../constants/datafilms/picturesArr"
 
 export function shiftLine(lineRef: RefDivT) {
   if (lineRef.current) {

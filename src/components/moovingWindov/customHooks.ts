@@ -1,7 +1,7 @@
 import { useLayoutEffect, useEffect, useState} from 'react';
 import { getInterval, shiftLine, move } from './utilits'
 import { DispatchT, RefDivT } from './types'
-import type { ArrPictureT } from '../../constants/picturesArr'
+import type { ArrPictureT } from '../../constants/datafilms/picturesArr'
 
 
 

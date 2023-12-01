@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './ElementFilmPage.module.css'
 import { Link } from "react-router-dom"
-import { PREVIEWFILMPAGE } from '../../../rout_path/paths'
+import { PREVIEWFILMPAGE } from '../../../constants/paths'
 import { useActions } from '../../../hooks/redux';
 import StarsRaiting from '../../starsRaiting/StarsRaiting';
 import type { FilmItem } from '../../fetchingTypes'
@@ -10,17 +10,17 @@ import Poster from '../poster/Poster';
 import Description from '../description/Description';
 import { ReactComponent as Ribbon } from '../../../assets/img/svg/certificate.svg'
 import Raiting from '../../previewPage_items/raiting/Raiting';
-import {ReactComponent as Remove} from '../../../assets/img/svg/remove.svg'
+import { ReactComponent as Remove } from '../../../assets/img/svg/remove.svg'
 
 
 type ElementFilmPageT = { elemFilms: FilmItem | null, elemFilmLiked: PicturesId | null }
-  
+
 const ElementFilmPage: React.FC<ElementFilmPageT> = ({ elemFilms, elemFilmLiked }) => {
   const { fetchIdFilm, remainLikedId } = useActions()
   const [message, setMessage] = useState(false)
   const backFon = message ? style.fonActive : style.fonPassive
   const describeMessage = message ? [style.messageDescPassive, style.messageDescActive].join(" ") : style.messageDescPassive
-  
+
 
 
   if (elemFilms) {
@@ -113,10 +113,10 @@ const ElementFilmPage: React.FC<ElementFilmPageT> = ({ elemFilms, elemFilmLiked 
             }}
           >
             <Remove className={style.remove} />
-          </button>  
-          
-         
-          </Link>
+          </button>
+
+
+        </Link>
       </div>
     )
   } else {
@@ -124,7 +124,7 @@ const ElementFilmPage: React.FC<ElementFilmPageT> = ({ elemFilms, elemFilmLiked 
       <p>sdf</p>
     )
   }
-  
+
 
 }
 

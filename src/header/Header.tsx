@@ -10,12 +10,12 @@ import ItemsElements from './components/ItemsElements/ItemsElements';
 import BurgerMenuBig from './components/burgerMenuBig/BurgerMenuBig';
 import BurgerMenuLittle from './components/burgerMenuLittle/BurgerMenuLittle';
 import PullOutMenu from './components/pullOutMenu/PullOutMenu';
-import { SEARCHFILMPAGE } from '../rout_path/paths'
+import { SEARCHFILMPAGE } from '../constants/paths'
 import { Link } from 'react-router-dom'
 
 
 const Header: React.FC = () => {
-  
+
 
   return (
     <header>
@@ -25,32 +25,32 @@ const Header: React.FC = () => {
           <BurgerMenuBig />
         </div>
 
-        
+
         <div className={[style.flexAlighnContainer, grid.contacts].join(" ")}>
-          <ContactsElement/>
+          <ContactsElement />
         </div>
-        
-        
+
+
         <div className={[style.flexAlighnContainer, grid.search].join(" ")}>
-          <Search/>
+          <Search />
         </div>
 
         <div className={[style.flexAlighnContainer, grid.items].join(" ")}>
-          <ItemsElements/>
+          <ItemsElements />
         </div>
-        
+
         {/* <div className={[style.flexAlighnContainer, grid.burger].join(" ")}>
           <BurgerMenuLittle/>
         </div> */}
 
-        
+
         {/* <div className={[style.flexAlighnContainer, grid.logo].join(" ")}>
           <LogoElement />
         </div> */}
-        
+
       </div>
       {/* <PullOutMenu/> */}
-      
+
     </header>
   );
 }
