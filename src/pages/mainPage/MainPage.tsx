@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './MainPage.module.css'
-import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
-import ScrollLineRecomend from '../../components/scrollLineRecomend/ScrollLineRecomend'
+import MoovingVindov from '../../modules/moovingWindov/MoovingWindov';
+import ScrollLineRecomend from '../../modules/scrollLineRecomend/ScrollLineRecomend'
 import { posters as post } from '../../constants/datafilms/picturesArr'
-import RecomendFilm from '../../components/recomendFilm/RecomendFilm';
+import RecomendFilm from '../../modules/recomendFilm/RecomendFilm';
 import boevick from '../../constants/datafilms/boevickPictures.json'
 import comedy from '../../constants/datafilms/comedyPictures.json'
 import fantastic from '../../constants/datafilms/fantasticPictures.json'

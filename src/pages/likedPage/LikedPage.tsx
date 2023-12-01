@@ -2,7 +2,7 @@ import React from 'react';
 import style from './LikedPage.module.css'
 import { useSelector } from 'react-redux';
 import { selectFilm } from '../../redux/selectors/filmSelector';
-import ElementFilmPage from '../../components/searchPage_items/elementFilmPage/ElementFilmPage';
+import ElementFilmPage from '../../components/elementFilmPage/ElementFilmPage';
 
 const LikedPage: React.FC = () => {
   const { likedMovie } = useSelector(selectFilm)
@@ -11,15 +11,15 @@ const LikedPage: React.FC = () => {
     <div className={wrapper}>
       {
         likedMovie.length ?
-        <h2 className={style.title}>
-          Понравившиеся Фильмы
-        </h2>
+          <h2 className={style.title}>
+            Понравившиеся Фильмы
+          </h2>
           :
-        <h2 className={style.title}>
-          Пусто    
-        </h2>
+          <h2 className={style.title}>
+            Пусто
+          </h2>
       }
-      
+
 
       <div className={style.gridContainer}>
         {
@@ -36,6 +36,7 @@ const LikedPage: React.FC = () => {
       </div>
 
     </div>
+    
   );
 }
 export default LikedPage;

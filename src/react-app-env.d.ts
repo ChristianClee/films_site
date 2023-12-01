@@ -8,3 +8,4 @@ declare module 'csstype' {
     '--sizeSrar'?: string;
   }
 }
+

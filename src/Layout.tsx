@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import Header from './header/Header';
-import Footer from './footer/Footer';
-import PopUpMessage from './components/popUpMessage/globalPopUp/PopUpMessage';
-import ContactMessage from './components/contactMessage/ContactMessage';
-import Greeting from './components/greeting/Greeting';
+import Header from './modules/header/Header';
+import Footer from './modules/footer/Footer';
+import PopUpMessage from './components/globalPopUp/PopUpMessage';
+import ContactMessage from './UI/contactMessage/ContactMessage';
+import Greeting from './UI/greeting/Greeting';
 
 const Layout: React.FC = () => {
 

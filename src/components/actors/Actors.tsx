@@ -1,23 +1,30 @@
 import React from 'react';
 import style from './Actors.module.css'
-import { PicturesId, TipeT } from '../types'
-import ScrollLine from '../scrollLine/ScrollLine';
+import { TipeT } from '../types'
 
+// @ts-ignore
+const Actors: React.FC<{ actors: TipeT[] }> = ({ actors }) => {
 
-const Actors: React.FC<{ filmData: PicturesId }> = ({ filmData }) => {
-
-
-  const actors: TipeT[] = filmData
-    .persons
-    .map(elem => elem )
-    .filter((elem, index) => elem !== null )
-
-  
   return (
-    <ScrollLine pictures={null} actors={actors} title='Актёры' />
+    actors.map((item) => {
+
+      return (
+        <div className={style.element2}
+          key={`${item.photo} ${Math.random()}`}
+        >
+          <p className={style.element2Name}>{item.name}</p>
+          <>
+            {
+              item.photo ?
+                <img
+                  className={style.element2Picture}
+                  src={item.photo} alt="" />
+                : null
+            }
+          </>
+        </div>
+      )
+    })
   )
 }
 export default Actors;
-
-
-

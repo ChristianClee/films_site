@@ -2,10 +2,10 @@ import React, { useRef, useState } from 'react';
 import style from './ScrollLine.module.css'
 import { useListenerWindow } from './customHooks'
 import { mousedown } from './utilits'
-import Arrows from './arrows/Arrows';
-import { PicturesId,TipeT } from '../types'
-import Films from './films/Films';
-import Actors from './actors/Actors';
+import Arrows from '../arrows/Arrows';
+import { PicturesId, TipeT } from '../types'
+import Films from '../films/Films';
+import Actors from '../actors/Actors';
 
 
 type ScrollLineT = {
@@ -14,14 +14,14 @@ type ScrollLineT = {
   title: string,
 }
 
-const ScrollLine: React.FC<ScrollLineT> = ({ pictures, actors, title}) => {
+const ScrollLine: React.FC<ScrollLineT> = ({ pictures, actors, title }) => {
   const flagRef = useRef(false)
   const moveMentXRef = useRef(0)
   const [scrollLeft, setCurrentScr] = useState<number>(0)
   const lineRef = useRef<HTMLDivElement>(null)
 
   useListenerWindow(flagRef, lineRef, moveMentXRef, setCurrentScr)
- 
+
   return (
     <div className={style.wrapper}>
       <h3 className={style.title}> {title} </h3>
@@ -51,7 +51,7 @@ const Elements: React.FC<ElementsT> = ({ pictures, actors }) => {
   return (
     <>
       {
-        pictures ? 
+        pictures ?
           <Films pictures={pictures} />
           :
           actors ?
@@ -60,5 +60,5 @@ const Elements: React.FC<ElementsT> = ({ pictures, actors }) => {
             null
       }
     </>
-    )
+  )
 }

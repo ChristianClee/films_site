@@ -1,5 +1,8 @@
 {
   "name": "book-app",
+  "imports": {
+    "#*": "./src/*"
+  },
   "version": "0.1.0",
   "private": true,
   "homepage": "https://christianclee.github.io/films_site/",

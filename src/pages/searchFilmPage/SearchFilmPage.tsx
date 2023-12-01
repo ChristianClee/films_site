@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import style from './SearchFilmPage.module.css'
-import ButtonTwo from '../../components/buttons/buttonTwo/ButtonTwo';
+import ButtonTwo from '#UI/buttons/buttonTwo/ButtonTwo';
 import { useSelector } from 'react-redux';
 import { selectFetching } from '../../redux/selectors/fetchingSelector';
 import { useActions } from '../../hooks/redux';
-import ElementFilmPage from '../../components/searchPage_items/elementFilmPage/ElementFilmPage';
-import ElementsFilmPage from '../../components/searchPage_items/elementsFilmPage/ElementsFilmPage';
-import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
+import ElementsFilmPage from '#modules/elementsFilmPage/ElementsFilmPage';
+import MoovingVindov from '../../modules/moovingWindov/MoovingWindov';
 import { posters } from '../../constants/datafilms/picturesArr'
-import type { FilmItem } from '../../components/fetchingTypes'
 
 const SearchFilmPage: React.FC = () => {
   const { queryFilms, limitView, pages } = useSelector(selectFetching)

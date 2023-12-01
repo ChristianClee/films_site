@@ -3,15 +3,15 @@ import style from './PreviewFilmPage.module.css';
 import type { PicturesId } from '../../components/types';
 
 import { posters } from '../../constants/datafilms/picturesArr'
-import ButtonsBlock from '../../components/buttonBlock/ButtonBlock';
-import Watchability from '../../components/previewPage_items/watchability/Watchability';
-import Actors from '../../components/actors/Actors';
-import MoovingVindov from '../../components/moovingWindov/MoovingWindov';
-import Poster from '../../components/previewPage_items/poster/Poster';
-import Traller from '../../components/previewPage_items/traller/Traller';
-import Description from '../../components/previewPage_items/description/Description';
-import Raiting from '../../components/previewPage_items/raiting/Raiting';
-import Year from '../../components/previewPage_items/year/Year';
+import ButtonsBlock from '../../UI/buttons/buttonBlock/ButtonBlock';
+import Watchability from '../../UI/watchability/Watchability';
+import Actors from '../../modules/actors/Actors';
+import MoovingVindov from '../../modules/moovingWindov/MoovingWindov';
+import Poster from '../../UI/poster_1/Poster';
+import Traller from '../../UI/traller/Traller';
+import Description from '../../UI/description/Description';
+import Raiting from '../../components/raiting/Raiting';
+import Year from '../../UI/year/Year';
 import { useActions } from "../../hooks/redux"
 
 

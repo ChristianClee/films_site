@@ -5,7 +5,7 @@ import MainPage from './pages/mainPage/MainPage';
 import Layout from './Layout';
 import SeparatorPreviewPage from './pages/previewFilmPage/SeparatorPreviewPage';
 import { PREVIEWFILMPAGE, SEARCHFILMPAGE, LIKEDPAGE } from './constants/paths'
-import { useCloseTraller } from './app_utilits/customHooks'
+import { useCloseTraller } from './hooks/customHooks'
 import SearchFilmPage from './pages/searchFilmPage/SearchFilmPage';
 import LikedPage from './pages/likedPage/LikedPage';
 
