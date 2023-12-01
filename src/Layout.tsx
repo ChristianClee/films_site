@@ -21,8 +21,7 @@ const Layout: React.FC = () => {
       </main>
       <Footer />
 
-      <Greeting title='hello World'></Greeting>
-
+      {/* <Greeting title='hello World'></Greeting> */}
       <PopUpMessage>
         <ContactMessage />
       </PopUpMessage>
