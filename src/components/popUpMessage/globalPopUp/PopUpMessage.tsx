@@ -20,7 +20,7 @@ const PopUpMessage: React.FC<PopUpMessageT> = ({ children }) => {
       className={backFon}
       onClick={() => togglePopUpContacts()}
     >
-      {children}
+      {children} 
     </div>
   );
 }

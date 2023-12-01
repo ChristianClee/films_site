@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import style from './ContactMessage.module.css'
-import { useSelector } from 'react-redux';
-import { selectFilm } from '../../redux/selectors/filmSelector';
+import {useShowMessage} from './customHook'
 
 
 const ContactMessage: React.FC = () => {
-  const { popUpContacts } = useSelector(selectFilm)
-  const wrapper = popUpContacts ? [style.wrapper, style.wrapperActive].join(" ") : style.wrapper
+  const wrappRef = useRef<HTMLDivElement>(null)
+  useShowMessage(wrappRef)
+
   return (
-    <div className={wrapper}>
+    <div
+      ref={wrappRef}
+      className={style.wrapper}
+    >
       <div className={style.inscript}>Илья Мишков</div>
       <div className={style.inscript}>8 977 439 34 18</div>
     </div>

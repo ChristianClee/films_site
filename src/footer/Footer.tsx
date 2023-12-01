@@ -5,9 +5,6 @@ import style from './Footer.module.css'
 const Footer:React.FC = () => {
   return (
     <footer>
-      <div>
-        
-      </div>
     </footer>
   );
 }

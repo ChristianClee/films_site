@@ -4,7 +4,6 @@
   background-color: var( --headerColor);
   padding: .5rem;
   max-width: var(--maxWidth);
-  height: var(--heightHeader);
   margin: 0 auto;
 }
 .containerGreed::before{

@@ -6,12 +6,8 @@
   transform: translateY(-30vh);
   opacity: 0;
   transition: .5s;
-  
 }
-.wrapperActive{
-  transform: translateY(0);
-  opacity: 1;
-}
+
 
 .inscript{
   font-size: 2rem;
