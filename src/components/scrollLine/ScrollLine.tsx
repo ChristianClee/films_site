@@ -15,6 +15,7 @@ type ScrollLineT = {
 }
 
 const ScrollLine: React.FC<ScrollLineT> = ({ pictures, actors, title }) => {
+  
   const flagRef = useRef(false)
   const moveMentXRef = useRef(0)
   const [scrollLeft, setCurrentScr] = useState<number>(0)

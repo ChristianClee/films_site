@@ -20,7 +20,6 @@ const SearchFilmPage: React.FC = () => {
 
         <div>
           <ElementsFilmPage queryFilms={queryFilms} />
-          {/* <ElementsFilmPage queryFilms={items} /> */}
         </div>
 
         <div className={style.buttonPosition}>

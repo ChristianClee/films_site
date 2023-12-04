@@ -1,0 +1,10 @@
+.item{
+  position: relative;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.item:hover p{
+  transition: .25s;
+  color: white;
+}

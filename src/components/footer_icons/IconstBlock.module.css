@@ -1,0 +1,10 @@
+.sosials{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.sosial{
+  flex: 0 0 2rem;
+  height: 2rem;
+  fill: wheat;
+}

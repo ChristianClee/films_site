@@ -29,7 +29,6 @@ export const fetchingSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchFilms.pending, (state, action) => {
     })
-    
     builder.addCase(fetchFilms.fulfilled, (state, action: PayloadAction<FetchT>) => {
       state.queryFilms = action.payload.docs
       state.page = action.payload.page
@@ -40,8 +39,6 @@ export const fetchingSlice = createSlice({
     builder.addCase(fetchFilms.rejected, (state, action) => {
       console.log(action.payload)
     });
-
-
     builder.addCase(fetchIdFilm.fulfilled, (state, action) => {
       state.filmId = action.payload
     })

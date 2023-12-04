@@ -1,0 +1,25 @@
+.basement{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(26, 26, 26);
+  flex-wrap: wrap;
+}
+.years{
+  order: 3;
+}
+.years span{
+  font-size: .7rem;
+}
+.ulBasMent{
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+}
+.progectName{
+  order: 2;
+}
+.progectName span{
+  font-size: 1.7rem;
+  color: white;
+}

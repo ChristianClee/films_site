@@ -1,27 +1,10 @@
 .wrapper{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem 0;
 }
 
-.sosials{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-.sosial{
-  flex: 0 0 2rem;
-  height: 2rem;
-  fill: wheat;
-}
-.content{
-  display: flex;
-  /* gap: 2rem; */
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 1.2rem; 
-}
 .item{
   position: relative;
   padding: .5rem 1rem;
@@ -31,34 +14,6 @@
 .item:hover p{
   transition: .25s;
   color: white;
-}
-
-
-
-
-.apps{
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-.app{
-  display: flex;
-  align-items: center;
-  padding: .5rem;
-  border-radius: .5rem;
-  background-color: rgb(89, 89, 89);
-  gap: .5rem;
-  cursor: pointer;
-}
-.app:hover{
-  background-color: rgb(143, 143, 143);
-  color: black;
-}
-.app:hover .iconLogo{
-  fill:rgb(60, 73, 59);
-}
-.app:hover .subtitle,.app:hover .title {
-  color: black;
 }
 
 .iconLogo{
@@ -83,23 +38,3 @@
 
 
 
-.basement{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: rgb(26, 26, 26);
- 
-}
-.years{
-
-}
-.years span{
-  font-size: .7rem;
-}
-.ulBasMent{
-  display: flex;
-}
-.progectName span{
-  font-size: 1.7rem;
-  color: white;
-}
