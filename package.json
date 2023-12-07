@@ -15,6 +15,7 @@
     "@types/node": "^16.18.58",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
+    "axios": "^1.6.2",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -31,9 +32,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-preCommit": "cross-env CI=true react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +57,12 @@
     ]
   },
   "devDependencies": {
-    "@types/react-transition-group": "^4.4.8"
+    "@types/react-transition-group": "^4.4.8",
+    "husky": "^8.0.3"
+  },
+    "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(axios|react-day-picker)/)"
+    ]
   }
 }
