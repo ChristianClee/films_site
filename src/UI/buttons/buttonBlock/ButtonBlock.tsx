@@ -25,8 +25,6 @@ const ButtonsBlock: React.FC<{ title: string, dispatch: () => void, idFilm: Pict
         <Play className={style.imgSvgPlay} />
       </button>
 
-
-
       {
         idFilm.id &&
         <div className={style.imgConteiner}
@@ -40,7 +38,6 @@ const ButtonsBlock: React.FC<{ title: string, dispatch: () => void, idFilm: Pict
           }
         </div>
       }
-
 
     </div>
   )
